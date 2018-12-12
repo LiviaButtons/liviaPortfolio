@@ -1,0 +1,152 @@
+/* declaring colour variables */
+$main-teal: #2d909c;
+$dark-teal: #2d535b;
+$dark-grey: #303030;
+$light-grey: #f4f2f2;
+
+/* importing fonts */
+@font-face {
+    font-family: Lato;
+    src: url(../assets/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: LatoLight;
+    src: url(../assets/fonts/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: LatoBold;
+    src: url(../assets/fonts/Lato-Bold.ttf);
+}
+
+/* declaring font variables */
+$heading-font: 'LatoBold', sans-serif;
+$text-font: 'Lato', sans-serif;
+
+* {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+/* --------------------------------------------------- */
+/* --------------------- General --------------------- */
+html * {
+    font-family: $text-font;
+    line-height: 1.5em;
+    color: $dark-grey;
+    
+    p, ul, li {
+        font-size: 16px;
+    }
+}
+
+body {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+header, 
+main,
+section, 
+footer {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+}
+
+header {
+    padding-top: 0;
+}
+
+main {
+    margin-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    color: $main-teal;
+}
+
+
+/* --------------------------------------------------- */
+/* ------------------------ Nav ---------------------- */
+nav {
+    background-color: $main-teal;
+    
+    .container-fluid {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: $main-teal;
+        
+        ul {
+            
+            li {
+                a { 
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------- */
+/* ----------------------- About --------------------- */
+
+.about-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 300px;
+//    background-color: $light-grey;
+    box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
+    padding: 30px;
+    border-radius: 8px;
+    
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            border: 1px solid $main-teal;
+            border-radius: 50px;
+        }
+    }
+    
+    .find-me {
+        padding-top: 20px;
+    }
+    
+    ul {
+        padding: 0;
+        margin-left: 0;
+        list-style: none;
+        
+        li > span {
+            color: $main-teal;
+            padding-right: 10px;
+            display: inline;
+        }
+    }
+}
+
+
+
+/* --------------------------------------------------- */
+/* ---------------------- Footer --------------------- */
+footer {
+    background-color: $main-teal;
+    
+    img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #FFF;
+        border-radius: 50px;
+    }
+}
