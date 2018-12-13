@@ -80,6 +80,9 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     background-color: #2d909c; }
+    #nav .container-fluid .navbar-default,
+    #nav .container-fluid .navbar-collapse {
+      border: none; }
     #nav .container-fluid .navbar-header #hamMenu {
       border: none;
       width: 60px;
