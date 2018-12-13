@@ -1,44 +1,198 @@
 /* declaring colour variables */
 /* importing fonts */
-@font-face { font-family: Lato; src: url(../assets/fonts/Lato-Regular.ttf); }
-@font-face { font-family: LatoLight; src: url(../assets/fonts/Lato-Light.ttf); }
-@font-face { font-family: LatoBold; src: url(../assets/fonts/Lato-Bold.ttf); }
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Regular.ttf); }
+@font-face {
+  font-family: LatoLight;
+  src: url(../assets/fonts/Lato-Light.ttf); }
+@font-face {
+  font-family: LatoBold;
+  src: url(../assets/fonts/Lato-Bold.ttf); }
 /* declaring font variables */
-* { box-sizing: border-box; border-collapse: collapse; }
+* {
+  box-sizing: border-box;
+  border-collapse: collapse; }
 
 /* --------------------------------------------------- */
 /* --------------------- General --------------------- */
-html * { font-family: "Lato", sans-serif; line-height: 1.5em; color: #303030; }
-html * p, html * ul, html * li { font-size: 16px; }
+html * {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5em;
+  color: #303030; }
+  html * p, html * ul, html * li {
+    font-size: 16px; }
 
-body { width: 100%; margin: 0 !important; padding: 0 !important; }
+body {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important; }
 
-header, main, section, footer { width: 100%; padding-top: 40px; padding-bottom: 40px; margin: 0; }
+header,
+main,
+section,
+footer {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0; }
 
-header { padding-top: 0; }
+header {
+  padding-top: 0; }
 
-main { margin-top: 80px; }
+main {
+  margin-top: 80px; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "LatoBold", sans-serif; color: #2d909c; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "LatoBold", sans-serif;
+  color: #2d909c; }
+
+h2 {
+  text-align: center;
+  position: relative;
+  z-index: 1; }
+  h2:before {
+    border-top: 2px solid #2d909c;
+    content: "";
+    margin: 0 auto;
+    /* this centers the line to the full width specified */
+    position: absolute;
+    /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1; }
+  h2 span {
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+    font-family: "LatoBold", sans-serif;
+    color: #2d909c;
+    background: #fff;
+    padding: 0 15px; }
 
 /* --------------------------------------------------- */
 /* ------------------------ Nav ---------------------- */
-nav { background-color: #2d909c; }
-nav .container-fluid { width: 100%; margin-left: 0; margin-right: 0; background-color: #2d909c; }
-nav .container-fluid ul li a { color: #FFF; }
+#nav {
+  background-color: #2d909c; }
+  #nav .container-fluid {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #2d909c; }
+    #nav .container-fluid .navbar-header button[aria-expanded="true"] {
+      background-color: #2d535b; }
+    #nav .container-fluid .navbar-header button[aria-expanded="false"] {
+      background-color: #2d909c; }
+    #nav .container-fluid .navbar-header span {
+      background-color: #FFF; }
+    #nav .container-fluid .navbar-header button:hover {
+      background-color: #FFF; }
+      #nav .container-fluid .navbar-header button:hover span {
+        background-color: #2d909c; }
+    #nav .container-fluid .navbar-header a {
+      color: #FFF; }
+    #nav .container-fluid ul li a {
+      color: #FFF; }
+    #nav .container-fluid .active a {
+      background-color: #2d535b; }
+
+/* --------------------------------------------------- */
+/* -------------------- Portfolio -------------------- */
+#portfolio #portfolio-buttons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  #portfolio #portfolio-buttons button {
+    padding: 5px 10px 5px 10px;
+    width: 65px;
+    color: #2d909c;
+    background-color: #fff;
+    border: 1px solid #2d909c;
+    border-radius: 8px; }
+  #portfolio #portfolio-buttons button.active {
+    color: #FFF;
+    background-color: #2d909c;
+    border: 1px solid #FFF; }
 
 /* --------------------------------------------------- */
 /* ----------------------- About --------------------- */
-.about-box { margin-top: 10px; margin-bottom: 10px; min-height: 300px; box-shadow: #d6d6d6 0px 0px 15px 3px, #d6d6d6 0px 0px 15px 3px; padding: 30px; border-radius: 8px; }
-.about-box div { display: flex; flex-direction: row; justify-content: center; align-items: center; }
-.about-box div img { width: 35px; height: 35px; margin-right: 10px; border: 1px solid #2d909c; border-radius: 50px; }
-.about-box .find-me { padding-top: 20px; }
-.about-box ul { padding: 0; margin-left: 0; list-style: none; }
-.about-box ul li > span { color: #2d909c; padding-right: 10px; display: inline; }
+.about-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 350px;
+  box-shadow: #d6d6d6 0px 0px 15px 3px, #d6d6d6 0px 0px 15px 3px;
+  padding: 30px;
+  border-radius: 8px; }
+  .about-box div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .about-box div img {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+      border: 1px solid #2d909c;
+      border-radius: 50px; }
+  .about-box .find-me {
+    padding-top: 20px; }
+  .about-box ul {
+    padding: 0;
+    margin-left: 0;
+    list-style: none; }
+    .about-box ul li > span {
+      color: #2d909c;
+      padding-right: 10px;
+      display: inline; }
 
 /* --------------------------------------------------- */
 /* ---------------------- Footer --------------------- */
-footer { background-color: #2d909c; }
-footer img { width: 40px; height: 40px; border: 1px solid #FFF; border-radius: 50px; }
+footer {
+  background-color: #2d909c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  footer h2:before {
+    border-top: 2px solid #FFF; }
+  footer h2 span {
+    color: #FFF;
+    background: #2d909c;
+    padding: 0 15px; }
+  footer .social-buttons {
+    margin: 20px; }
+    footer .social-buttons img {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #FFF;
+      border-radius: 50px; }
+  footer .contact-form input,
+  footer .contact-form textarea,
+  footer .contact-form button {
+    background-color: #2d909c;
+    border: 1px solid #FFF;
+    border-radius: 8px;
+    padding: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #FFF;
+    width: 100%;
+    height: 50px; }
+  footer .contact-form input::placeholder,
+  footer .contact-form textarea::placeholder {
+    color: #FFF; }
+  footer .contact-form textarea {
+    resize: none; }
+  footer .contact-form span {
+    color: #FFF;
+    margin-right: 15px; }
+  footer p {
+    margin: 15px;
+    color: #FFF;
+    font-size: 12px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,37 +19,37 @@
         <header>
             <nav id="nav" class="navbar navbar-default">
                 <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Livia Bottoni</a>
-                </div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-content" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Livia Bottoni</a>
+                    </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">                  
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                  </ul>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="nav-content">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div>
                 </div>
-              </div>
             </nav>
         </header>
         
         <main style="padding-top: 60px">
             <section id="portfolio" class="container-fluid">
-                <h1>Portfolio</h1>
+                <h2><span>Portfolio</span></h2>
                 
-                <div id="portfolio-buttons">
-                    <button>All</button>
-                    <button>Web</button>
-                    <button>Design</button>
+                <div id="portfolio-buttons" class="col-xs-10 col-xs-offset-1">
+                    <button id="all">All</button>
+                    <button id="web">Web</button>
+                    <button id="design">Design</button>
                 </div>
                 
                 <div class="row col-xs-10 col-xs-offset-1">    
@@ -91,10 +91,10 @@
             </section>
             
             <section id="about" class="container-fluid">
-                <h2>About</h2>
+                <h2><span>About</span></h2>
                
                 <div class="row col-xs-10 col-xs-offset-1">
-                    <div class="col-xs-10 col-md-4">
+                    <div class="col-xs-12 col-md-4">
                         <div class="about-box">
                             <div>
                                 <img src="./assets/icons/head-white.svg" alt="Icon depicting a head">
@@ -133,7 +133,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-10 col-md-4">
+                    <div class="col-xs-12 col-md-4">
                         <div class="about-box">
                             <div>
                                 <img src="./assets/icons/code-white.svg" alt="Icon meant to depict code">
@@ -176,7 +176,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-10 col-md-4">
+                    <div class="col-xs-12 col-md-4">
                         <div class="about-box">
                             <div>
                                 <img src="./assets/icons/brush-white.svg" alt="Icon of a brush">
@@ -215,7 +215,7 @@
         </main>
         
         <footer id="contact" class="container-fluid">
-            <h2>Contact</h2>
+            <h2><span>Contact</span></h2>
             <div class="col-md-4 social-buttons">
                 <a href="https://github.com/LiviaButtons" title="GitHub"><img class="soc-icons" src="./assets/icons/github.svg" alt="Github icon"></a>
                 <a href="https://www.linkedin.com/in/liviabottoni/" title="LinkedIn"><img class="soc-icons" src="./assets/icons/linkedin.svg" alt="LinkedIn icon"></a>

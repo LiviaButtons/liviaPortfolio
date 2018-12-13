@@ -69,10 +69,35 @@ h1, h2, h3, h4, h5, h6 {
     color: $main-teal;
 }
 
+h2 {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    
+    &:before {
+        border-top: 2px solid $main-teal;
+        content:"";
+        margin: 0 auto; /* this centers the line to the full width specified */
+        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    span { 
+        /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+        font-family: $heading-font;
+        color: $main-teal;
+        background: #fff; 
+        padding: 0 15px; 
+    }
+}
+
 
 /* --------------------------------------------------- */
 /* ------------------------ Nav ---------------------- */
-nav {
+#nav {
     background-color: $main-teal;
     
     .container-fluid {
@@ -80,6 +105,33 @@ nav {
         margin-left: 0;
         margin-right: 0;
         background-color: $main-teal;
+        
+        .navbar-header {
+            
+            button[aria-expanded="true"]{
+                background-color: $dark-teal;
+            }
+
+            button[aria-expanded="false"] {
+                background-color: $main-teal;
+            }
+            
+            span {
+                background-color: #FFF;
+            }
+            
+            button:hover {
+                background-color: #FFF;
+                
+                span {
+                    background-color: $main-teal;
+                }
+            }
+            
+            a {
+                color: #FFF;  
+            }
+        }
         
         ul {
             
@@ -89,8 +141,45 @@ nav {
                 }
             }
         }
+        
+        .active {
+            a {
+                background-color: $dark-teal;
+            }
+        }
     }
 }
+
+
+/* --------------------------------------------------- */
+/* -------------------- Portfolio -------------------- */
+#portfolio {
+    #portfolio-buttons {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        button {
+            padding: 5px 10px 5px 10px;
+            width: 65px;
+            color: $main-teal;
+            background-color: #fff;
+            border: 1px solid $main-teal;
+            border-radius: 8px;
+        }
+        
+        button.active {
+            color: #FFF;
+            background-color: $main-teal;
+            border: 1px solid #FFF;
+        }
+    }
+    
+}
+
 
 /* --------------------------------------------------- */
 /* ----------------------- About --------------------- */
@@ -98,8 +187,7 @@ nav {
 .about-box {
     margin-top: 10px;
     margin-bottom: 10px;
-    min-height: 300px;
-//    background-color: $light-grey;
+    min-height: 350px;
     box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
     padding: 30px;
     border-radius: 8px;
@@ -142,11 +230,67 @@ nav {
 /* ---------------------- Footer --------------------- */
 footer {
     background-color: $main-teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
-    img {
-        width: 40px;
-        height: 40px;
-        border: 1px solid #FFF;
-        border-radius: 50px;
+    
+    h2 {
+        &:before {
+            border-top: 2px solid #FFF;
+        }
+        span { 
+            color: #FFF;
+            background: $main-teal; 
+            padding: 0 15px; 
+        }
+    }
+
+    .social-buttons {
+        margin: 20px;
+        
+        img {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #FFF;
+            border-radius: 50px;
+        }
+    }
+    
+    .contact-form {
+        input,
+        textarea,
+        button {
+            background-color: $main-teal;
+            border: 1px solid #FFF;
+            border-radius: 8px;
+            padding: 12px;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #FFF;
+            width: 100%;
+            height: 50px;
+        }
+        
+        input::placeholder,
+        textarea::placeholder {
+            color: #FFF;
+        }
+        
+        textarea {
+            resize: none;
+        }
+        
+        span {
+            color: #FFF;
+            margin-right: 15px;
+        }
+    }
+    
+    p {
+        margin: 15px;
+        color: #FFF;
+        font-size: 12px;
     }
 }
