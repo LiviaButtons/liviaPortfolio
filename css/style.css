@@ -19,7 +19,8 @@
 html * {
   font-family: "Lato", sans-serif;
   line-height: 1.5em;
-  color: #303030; }
+  color: #303030;
+  scroll-behavior: smooth; }
   html * p, html * ul, html * li {
     font-size: 16px; }
 

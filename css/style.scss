@@ -35,6 +35,7 @@ html * {
     font-family: $text-font;
     line-height: 1.5em;
     color: $dark-grey;
+    scroll-behavior: smooth;
     
     p, ul, li {
         font-size: 16px;
