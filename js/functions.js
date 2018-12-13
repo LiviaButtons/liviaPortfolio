@@ -4,13 +4,11 @@
 
 // -------------------------
 // Function for hamburger menu and animation
-// based on: https://codepen.io/designcouch/pen/Atyop
-
+// animation based on: https://codepen.io/designcouch/pen/Atyop
 $(document).ready(function (event) {
     // "open" and "close" hamburger Menu upon click
     $('#hamMenu').on("click", function (e) {
         $('#hamMenu').toggleClass('open');
-        console.log (e.target);
     });
     
     $('.navbar-nav > *').on("click", function (e) {
@@ -20,7 +18,6 @@ $(document).ready(function (event) {
         
         // also, change the active attribute to the link that was clicked
         $('.navbar-nav > *').removeClass('active');
-        console.log (e.target);
         $current = e.target;
         $parent = $($current).parent();
         $($parent).addClass('active');
@@ -31,7 +28,6 @@ $(document).ready(function (event) {
         // also: generally get a scroll effect when navigating menu ----- pure CSS done
         
     });
-    
     
     
     
@@ -55,4 +51,26 @@ $(document).ready(function (event) {
         
         // next step: animation on show/hide
     });
+    
+    
+    // --------------------------
+    // Function to change active class while scrolling
+    $(document).on("scroll", onScroll);
+    
+    function onScroll (event) {
+//        console.log ('you scrolled');
+//		$scrollPosition = $(document).scrollTop();
+//		
+//        $('nav a').each(function () {
+//			var currentLink = $(this);
+//			var refElement = $(currentLink.attr("href"));
+//			if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+//				$('nav ul li').removeClass("active");
+//				currentLink.addClass("active");
+//			}
+//			else {
+//				currentLink.removeClass("active");
+//			}
+//		});
+	}
 });
