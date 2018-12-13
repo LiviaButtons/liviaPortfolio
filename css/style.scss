@@ -57,6 +57,16 @@ footer {
     margin: 0;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: #FFF;
+    background: $main-teal;
+}
+
+::selection {
+    color: #FFF;
+    background: $main-teal;
+}
+
 header {
     padding-top: 0;
 }
@@ -305,6 +315,15 @@ footer {
     justify-content: center;
     align-items: center;
     
+    ::-moz-selection { /* Code for Firefox */
+        color: $main-teal;
+        background: #FFF;
+    }
+
+    ::selection {
+        color: $main-teal;
+        background: #FFF;
+    }    
     
     h2 {
         &:before {
