@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+html {
+    width: 100%;
+    font-family: "LatoLight", sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+    color: #404040;
+    height:100%;
+}
+
+body, header, main, section, footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*FONTS*/
+
+@font-face {
+    font-family: AusthinaBrush;
+    src: url(../assets/fonts/AusthinaBrushCalligraphyScratch/AusthinaBrushCalligraphyScratch.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../assets/fonts/Lato2OFL/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: LatoLight;
+    src: url(../assets/fonts/Lato2OFL/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: LatoBold;
+    src: url(../assets/fonts/Lato2OFL/Lato-Bold.ttf);
+}
+
+div>h2.titreRecette {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+   
+}
+
+main{
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+body{
+/*    margin-bottom: 80px;*/
+    margin-top: 160px;   
+    font-family: LatoLight;/**/
+}
+
+main > div {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+/*    flex-direction: row;*/
+    justify-content: space-between;
+/*    align-items:center;*/
+}
+
+h2 {
+    font-family: LatoLight;
+    text-transform: uppercase;
+    font-size: 1.6em;
+   /* display: flex;*/
+    /*justify-content: center;
+    align-items: center;*/
+    
+    margin-right: auto;
+    margin-left: auto;
+                   /*rajoute*/
+}
+
+h2.titreRecette{
+    line-height: 1.3em; 
+    
+}
+
+
+
+section#section1{
+    width: 20%;
+    font-family: Lato;
+/*    background-color: blue;*/
+/*    border: 1px solid #707070;*/
+   
+}
+
+section#section1 div{
+    border-radius: 5px;
+    padding: 10px; 
+ /*   height: auto;*/
+    background-color: #EBEBEB;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    
+}
+
+input{
+    line-height: 20px;
+}
+
+section h3{
+    font-family: LatoLight;
+    /*font-family: Lato;*/
+/*    font-family: AusthinaBrush;*/
+/*    padding-left: 30px;*/
+    padding-bottom: 10px;
+    text-align: left;
+    
+}
+
+/*SECTION 2 IMAGES*/
+
+#section2{
+    width: 70%;
+/*    background-color: red;*/
+}
+
+
+
+.row {
+    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: space-between;
+    
+}
+
+
+
+
+
+.row div {
+    margin-bottom: 60px;
+
+    width: 240px;
+    height: 360px;
+    position: relative;
+/*  max-width: 800px;*/  /*pas cette ligne là*/
+
+
+}
+
+.row div img{
+    width: 240px;
+    height: 360px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.row>div>.content{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    height: 80px;
+    margin: 0 auto;
+
+}
+.row>div>.content p{ 
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    height: 80px;
+
+}
+
+.row>div>.content a{
+    text-decoration: none;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    height: 80px;
+
+}
+
+.row>div>.content a:visited{
+    text-decoration: none;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    height: 80px;
+    margin: 0 auto;
+
+}
+
+
+/*Container*/
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    user-select: none;
+    font-family: ;
+    
+    
+}
+
+form:nth-of-type(1) .container{
+/*    display: inline-block;*/
+
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+   /* background-color: #eee;*/
+    /*background-color: #F0C948;*/
+     background-color: #ccc;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #DE606E;
+    vertical-align:baseline;
+
+}
+
+.container input:checked ~ .checkmark {
+    /*background-color: #F0C948;*/
+    background-color: #DE606E;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.filterButton{
+    background-color: #869e40;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-family: LatoBold;
+    text-transform: uppercase;
+    color: #FFF;
+    width: 50%;
+}
+
+
+

@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+html {
+    width: 100%;
+    font-family: "LatoLight", sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+    color: #404040;
+}
+
+body, header, main, section, footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/*FONTS*/
+
+@font-face {
+    font-family: AusthinaBrush;
+    src: url(../assets/fonts/AusthinaBrushCalligraphyScratch/AusthinaBrushCalligraphyScratch.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../assets/fonts/Lato2OFL/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: LatoLight;
+    src: url(../assets/fonts/Lato2OFL/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: LatoBold;
+    src: url(../assets/fonts/Lato2OFL/Lato-Bold.ttf);
+}
+
+body{
+    margin-top: 140px;
+    font-family: LatoLight;
+}
+
+main{
+    margin-bottom: 80px;
+    margin-top: 60px;
+}
+
+main > div {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+/*    flex-direction: row;*/
+    justify-content: space-between;
+/*    align-items:center;*/
+}
+
+#titreRecette {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+/*    flex-direction: row;*/
+    justify-content: space-between;
+    align-items:center;
+    /*margin-bottom: 70px;*/
+    margin-top: 80px;
+}
+
+
+h2 {
+    font-family: 'LatoLight';
+    text-transform: uppercase;
+    font-size: 1.6em;
+}
+
+h3 {
+    font-family: 'LatoLight';
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+h4{
+    text-transform: lowercase;
+}
+
+
+
+div.calendarShare span {
+    margin-left: 30px;
+}
+
+div.calendarShare span:hover{
+/*    color: #F0C948;*/
+    border-bottom: 2px solid  #F0C948;
+/*    transform: scale(2,2);
+    */
+    
+    
+}
+
+div.calendarShare a span,
+div.calendarShare span {
+    color: #707070;    
+}
+
+
+
+/*LES SECTIONS*/
+
+/*SECTION 1*/
+#section1{
+    width: 65%;
+    font-family: Lato;
+/*    background-color: blue;*/
+}
+
+#imageRecette{
+/*    background-color: aqua;*/
+    height: auto;
+/*    width: 700px;*/
+    margin-bottom: 40px;
+    
+
+}
+
+#etapeRecette{
+/*    background-color: beige;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#imageRecette > img {
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+
+/*SECTION 2*/
+
+#section2{
+    width: 25%;
+    font-family: Lato;
+/*    background-color: red;*/
+}
+
+#contenuTemps{
+    background-color: #EBEBEB;
+/*    border: 1px solid #707070;*/
+    border-radius: 5px;
+    padding: 10px; 
+    margin-bottom: 20px;
+}
+#contenuTemps p {
+/*    padding: 0;*/
+    margin: 0;
+    margin-bottom: 7px;
+}
+
+#contenuIngredient{
+    background-color: #F0C948;
+    border: 1px solid #F0C948;
+    border-radius: 5px;
+    padding-top: 5px; 
+    /*padding-left: 20px; */
+    padding-right: 10px; 
+    /*padding-bottom: 10px; */
+    margin-bottom: 20px;
+}
+
+#contenuIngredient h3{
+    padding-left : 15px;
+    
+    font-size: 1.2em;
+}
+
+#portion{
+    background-color: #EBEBEB;
+/*    border: 1px solid #707070;*/
+    border-radius: 5px;
+    padding: 10px; 
+    margin-bottom: 20px;
+    
+}
+
+option{
+    text-align: center;
+}
+
+select{
+    padding: 10px;
+    width: 70%;
+}
+#btnServing {
+    background-color: #DE606E;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid ;
+    border-radius: 5px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+ul.ingredients li {
+    line-height: 25px;
+}
+
+#nomRecette{
+    line-height: 1.3em;
+}
+
+.inpServ{
+    width: 100%;
+    text-align: center;
+}
+
+@media(min-width : 900px){
+    .hiddenDesktop {
+        display: none;
+    }
+}
+
+@media(max-width : 500px){
+    .mobile{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        
+        width: 100%;
+        
+    }
+    #section1{
+        width: 100%;
+        text-align: justify;
+        justify-content: center;
+        display: inline-block;
+    }
+    
+    #section2{
+        width: 100%;
+        display: inline-block;
+        justify-content: center;
+    }
+    .hiddenMobile {
+    display: none;
+    }
+    
+    #titreRecette{
+        margin-top: 40px;
+    }
+/* --------------------------------------------- */
+/* ------------------ search bar --------------- */
+
+#auto2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+#auto2  input[type="text"] {
+    /*height: 40px;*/                                  /**************reel modif en bas*/
+    height: 35px;
+    padding: 10px;
+    margin-right: 0;
+    border: 1px solid transparent;
+    /*border-top-left-radius: 5px;  */                           /********reel en bas modif**/
+    border-top-left-radius: 40px;
+    /*border-bottom-left-radius: 5px;  */                                      /********reel en bas modif**/
+    border-bottom-left-radius: 40px;
+}
+
+
+
+
+#auto2  input[type="text"] {
+    background-color: #e3e3e3;
+}
+
+#auto2  button {
+    color: #FFF;
+    background: rgba(134, 158, 64, 0.7);
+    min-width: 50px;
+    padding: 11px;
+    margin-left: 0;
+    border: 1px solid transparent;
+    /*border-top-right-radius: 5px;*/
+    border-top-right-radius: 40px;
+    /*border-bottom-right-radius: 5px;*/
+    border-bottom-right-radius: 40px;
+    height: 35px; /**********************************rajoute*/
+}
+
+/* styling autocomplete ul element */
+.ui-menu,
+.ui-widget, 
+.ui-widget-content,
+.ui-autocomplete,
+.ui-front {
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(227, 227, 227, 0.7);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: fixed;
+    top: -2px;   
+    z-index: 999999999999999;
+}
+
+/* autocomplete list with links */
+.ui-menu-item,
+.ui-menu-item > div {
+    padding: 5px;
+    z-index: 999999999999999;
+}
+
+.ui-menu-item > div:hover {
+    background-color: #e3e3e3;
+    border: none;
+    z-index: 999999999999999;
+}
+
+
+}
+
+@media(max-width : 900px){
+    #titreRecette{
+        margin-top: 40px;
+    }
+    /* --------------------------------------------- */
+/* ------------------ search bar --------------- */
+
+#auto2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+#auto2  input[type="text"] {
+    /*height: 40px;*/                                  /**************reel modif en bas*/
+    height: 35px;
+    padding: 10px;
+    margin-right: 0;
+    border: 1px solid transparent;
+    /*border-top-left-radius: 5px;  */                           /********reel en bas modif**/
+    border-top-left-radius: 40px;
+    /*border-bottom-left-radius: 5px;  */                                      /********reel en bas modif**/
+    border-bottom-left-radius: 40px;
+}
+
+
+
+
+#auto2  input[type="text"] {
+    background-color: #e3e3e3;
+}
+
+#auto2  button {
+    color: #FFF;
+    background: rgba(134, 158, 64, 0.7);
+    min-width: 50px;
+    padding: 11px;
+    margin-left: 0;
+    border: 1px solid transparent;
+    /*border-top-right-radius: 5px;*/
+    border-top-right-radius: 40px;
+    /*border-bottom-right-radius: 5px;*/
+    border-bottom-right-radius: 40px;
+    height: 35px; /**********************************rajoute*/
+}
+
+/* styling autocomplete ul element */
+.ui-menu,
+.ui-widget, 
+.ui-widget-content,
+.ui-autocomplete,
+.ui-front {
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(227, 227, 227, 0.7);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: fixed;
+    top: -2px;   
+    z-index: 999999999999999;
+}
+
+/* autocomplete list with links */
+.ui-menu-item,
+.ui-menu-item > div {
+    padding: 5px;
+    z-index: 999999999999999;
+}
+
+.ui-menu-item > div:hover {
+    background-color: #e3e3e3;
+    border: none;
+    z-index: 999999999999999;
+}
+    .mobile{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        
+        width: 100%;
+        
+    }
+    #section1{
+        width: 100%;
+        text-align: justify;
+        justify-content: center;
+        display: inline-block;
+    }
+    
+    #section2{
+        width: 100%;
+        display: inline-block;
+        justify-content: center;
+    }
+    .hiddenMobile {
+    display: none;
+    }
+}
+
+
+
+

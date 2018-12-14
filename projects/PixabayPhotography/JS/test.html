@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    </head>
+    
+<script>
+
+
+$(document).ready(function (){
+
+var formPet = document.getElementsById("shoottype");
+    
+var petKind = document.querySelector("petKind");
+var petsChecked = document.querySelectorAll("pets");
+
+
+formPet.addEventListener('change', petSelected())    
+    
+    function petSelected() {
+        if (formPet.value == "s3" || formPet.value == "s4" || formPet.value == "s5" || formPet.value == "s6") 
+        {
+            petKind.style['display'] = 'inline-block';
+            pets.style['display'] = 'inline-block';
+        }
+        
+        else {
+            labelPets.style['display'] = 'hidden';
+            pets.style['display'] = 'hidden';
+        }
+    }
+/*
+    var formOtherLabel = document.querySelector("labelOther");
+    var formOther = document.querySelector("other");
+
+    function otherSelected() {
+        if (document.
+
+    }
+*/
+    
+});
+    
+</script>
+
+

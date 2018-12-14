@@ -1,0 +1,43 @@
+@media print
+{
+    *{
+        font-size: 1em;
+    }
+    
+    .noprint {
+        display:none;
+    }
+    
+    h2{
+        font-size: 1.2em;
+        margin: 0;
+        
+    }
+    
+    h3{
+        font-size: 1em;
+    }
+    
+    #section1{
+        width: 57%;	
+        text-align: justify;
+    }
+    
+    #section2{
+        width: 40%;
+    }
+    
+    #imageRecette{
+        margin: 0;
+    }
+    
+    #contenuTemps, #contenuIngredient{
+        border: 1px solid #707070;
+        border-radius: 5px;
+    }
+    
+    #titreRecette {
+        margin-bottom: 30px;
+    }
+    
+}

@@ -193,6 +193,9 @@ h2 {
 #portfolio .portfolio-section .port-box .portfolio-third {
   background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
   background-size: cover; }
+#portfolio .portfolio-section .port-box .portfolio-five {
+  background-image: url(../assets/portfolio/pixabayPhotography/pixabay-thumb.png);
+  background-size: cover; }
 #portfolio .portfolio-section img {
   max-width: 100%;
   max-height: 100%; }

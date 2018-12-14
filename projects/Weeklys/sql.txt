@@ -1,0 +1,37 @@
+CREATE VIEW view_cook AS
+SELECT DISTINCT
+  t_recette.idRecette AS "idRecette",
+  t_recette.nom AS "nomRecette",
+  t_recette.difficulte,
+  t_recette.duree AS "tempsTotalMinutes",
+  t_recette.tempsDePrep,
+  t_recette.tempsDeCuisson,
+  t_recette.tempsDeRepos,
+  t_recette.cout,
+  t_recette.image,
+  t_repas.nomRepas AS "typeDeRepas",
+  t_etapes.descriptEtapes AS "etapes",
+  t_ingredient.nomIngredient AS "ingredient",
+  t_ingredientrecette.ingredientQuantite AS "quantiteIngredient",
+  t_ingredientrecette.ingredientMesure AS "mesureIngredient",
+  t_categorie.nomCategorie AS "categorie",
+  t_temps.dureeTemps AS "dureeEnTranche"
+FROM t_recette
+	JOIN t_repasrecette 
+    	ON t_recette.idRecette = t_repasrecette.idRecette
+    JOIN t_repas
+    	ON t_repasrecette.idRepas = t_repas.idRepas
+    JOIN t_categorierecette
+    	ON t_recette.idRecette = t_categorierecette.idRecette
+    JOIN t_categorie
+    	ON t_categorierecette.idCategorie = t_categorie.idCategorie
+    JOIN t_ingredientrecette
+    	ON t_recette.idRecette = t_ingredientrecette.idRecette
+    JOIN t_ingredient
+    	ON t_ingredientrecette.idIngredient = t_ingredient.idIngredient
+    JOIN t_etapes
+    	ON t_recette.idRecette = t_etapes.idRecette
+    JOIN t_tempsrecette
+    	ON t_recette.idRecette = t_tempsrecette.idRecette
+    JOIN t_temps
+    	ON t_temps.idTemps = t_tempsrecette.idTemps

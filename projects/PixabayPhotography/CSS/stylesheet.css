@@ -1,0 +1,588 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif; 
+
+}
+
+
+
+/* -------------------------------------------*/ 
+/* Formatting the Parallax for the homepage */
+
+.bgimg-1, 
+.bgimg-2, 
+.bgimg-3,
+.bgimg-4 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.bgimg-1 {
+    background-image: url("../images/about/two-cameras.jpg");
+    min-height: 100vh;
+}
+
+.logoTop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.logoTop img {
+    opacity: 0.9;
+}
+
+.bgimg-2 {
+    background-image: url("../images/portrait/book-man-1005.jpg");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("../images/pets/dogs/dog-nose-1005.png");
+    min-height: 400px;
+}
+
+.bgimg-4 {
+    background-image: url("../images/pets/cats/sleeping-cat-1005.png");
+    min-height: 400px;
+}
+
+.introText {
+    background-color: #312d2d;
+    color: white;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 300%;
+    letter-spacing: 10px;
+}
+
+.caption span.border a {
+    text-decoration: none;
+    color: white;
+}
+
+.border {
+    position: relative;
+    background-color: transparent;
+    text-align: center;
+    padding: 50px 80px;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+/*@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+*/
+
+/* -------------------------------------------*/ 
+/* Formating header and navigation */
+
+.mainNav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.mainNav ul {
+    background-color: #722020;
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.mainNav li {
+    display: inline;
+    font-size: 150%;
+    list-style-type: none;
+}
+
+.mainNav li a {
+    display: inline-block;
+    background-color: #722020;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.mainNav li a:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.mainNav li a .active {
+    background-color: #521919;
+    color: white;
+}
+
+
+
+
+/* -------------------------------------------*/ 
+/* Making the header image centred */
+
+.logoHeader img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* -------------------------------------------*/ 
+/* Formatting the general html content */
+
+
+
+header {
+    background-color: #232323;
+}
+
+header img {
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #312d2d;
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    
+}
+
+h1 {
+    font-size: 200%;
+    margin-top: 80px;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h3 {
+    font-size: 120%;
+}
+
+h4 {
+    font-size: 100%;
+}
+
+h5 {
+    font-size: 90%;
+}
+
+h6 {
+    font-size: 800%;
+}
+
+main {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+
+/* -------------------------------------------*/ 
+/* Making the image galleries (portrait, cats, dogs) responsive (AKA a responsive image grid) */
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sit next to each other */
+.column {
+    -ms-flex: 24%; /* IE10 */
+    flex: 24%;
+    max-width: 24%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+/* -------------------------------------*/
+/* Responsive layout and mobile flexboxes */
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%; /* IE10 */
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 100%) {
+    #aboutFlex,
+    .column,
+    #bookingContact {
+        -ms-flex: 100%; /* IE10 */
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* -------------------------------------------*/
+/* Making the image gallery modal, AKA open up a slideshow when clicked */
+
+.column > .modalColumn {
+  padding: 0 8px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #000;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1005px;
+    max-height: auto;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* -------------------------------------------*/
+/*Styling the buttons, and links to look like buttons*/
+
+button {
+    background-color: #722020;
+    border: 1px solid #521919;
+    padding: 15px 25px;
+    margin: 5px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555555;
+    border: 1px solid #33332e;
+    color: white; 
+}
+
+.buttonLink {
+    display: inline-block;
+    background-color: #722020;
+    border: 1px solid #521919;
+    padding: 15px 25px;
+    margin: 5px;
+    color: #FFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.buttonLink:hover {
+    background-color: #555555;
+    border: 1px solid #33332e;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* -------------------------------------------*/
+/* Format the pricelist and boxes of prices */
+
+#pricelist {
+    display: flex;
+    width: 100%;
+}
+
+.priceColumn {
+    flex: 1;
+    max-width: 70%;
+    margin: 15px;
+    padding: 15px;
+}
+.pricing {
+    background-color: #222222;
+    padding: 8px 12px;
+    margin: 5px;
+    border: 1px solid #33332e;
+}
+
+
+/* -------------------------------------------*/
+/* Formatting flexboxes for about and contact pages */
+
+/* Ensure the two main divs are next to one another */
+#aboutFlex,
+#bookingContact {
+    display: flex;
+}
+
+#aboutText,
+#contact {
+    flex: 1;
+    max-width: 50%;
+    margin: 15px;
+    padding: 15px;
+}
+
+#aboutImages,
+#form {
+    max-width: 50%;
+    padding: 15px;
+    margin: 15px;
+    }
+
+
+/* -------------------------------------------*/
+/* formats what the form labels look like */
+.regLabel, 
+#shoottype,
+.labelPets {
+    display: inline-block;
+    width: 40%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+/* formats what the form fields look like */
+input[type="text"],
+input[type="email"], 
+#shoottype {
+    width: 50%;
+    height: 30px;
+    margin: 5px;
+    padding: 0 4px;
+    background-color: #555555;
+    color: white;
+}
+
+/* textarea follows same rules as the other fields but is taller */
+textarea {
+    width: 91%;
+    height: 100px;
+    margin: 5px;
+    padding: 0 4px;
+    border: 1px solid #1c1919;
+    background-color: #555555;
+    color: white;
+}
+
+
+/* Hide form sections that aren't relevant - to be shown based on user choices */
+.labelPets,
+.pets {
+    display: none;
+}
+
+
+/* -------------------------------------------*/
+/* Stop address from being displayed in cursive, format how the links work */
+address {
+    font-style: normal;
+}
+
+address a {
+    text-decoration: none;
+    color: white;
+    }
+
+address a:hover {
+    text-decoration: underline;
+}
+
+
+/* -------------------------------------------*/
+/* This code determines the formatting of the Google Map */
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: #f1f1f1;
+}
+
+/* -------------------------------------------*/
+/*Let's format the footer */
+
+/* This adds a margin at the bottom of the main container to the footer */
+main {
+    margin-bottom: 15px;
+}
+
+footer {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #33332e;
+    background-color: #141111;
+    color: #FFFFFF;
+    font-size: 80%;
+}
+
+.footerIcons {
+    display: block;
+    width: 100%;
+    background-color: #722020;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* The content of the footerBoxes shall be displayed flexibly */
+.footerBoxes {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+/* Create three equal columns that sit next to each other */
+.bottomBox {
+    -ms-flex: 32%; /* IE10 */
+    flex: 32%;
+    max-width: 32%;
+    padding: 0 4px;
+}
+
+footer a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+    padding: 0px; 
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    display: block;
+    width: 350px;
+    padding: 5px;
+    border-top: 1px solid #33332e;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12pt;
+    text-align: center;
+    padding-bottom: 5px;
+}

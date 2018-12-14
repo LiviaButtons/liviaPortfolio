@@ -1,0 +1,1125 @@
+* {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+html {
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #404040;
+}
+
+body, 
+header, 
+main,
+section, 
+footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header, section {
+    border-bottom: 1px solid rgb(30, 30, 30, 0.5);
+}
+
+main {
+    margin-top: 80px;
+}
+
+section:last-of-type {
+    padding-bottom: 40px;
+}
+
+.mobileHidden,
+.tabletHidden,
+.hidden {
+    display: none;
+}
+
+/* --------------------------------------------- */
+/* ------------------- fonts ------------------- */
+
+@font-face {
+    font-family: AusthinaBrush;
+    src: url(../assets/fonts/AusthinaBrushCalligraphyScratch/AusthinaBrushCalligraphyScratch.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../assets/fonts/Lato2OFL/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: LatoLight;
+    src: url(../assets/fonts/Lato2OFL/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: LatoBold;
+    src: url(../assets/fonts/Lato2OFL/Lato-Bold.ttf);
+}
+
+
+/* --------------------------------------------- */
+/* ------------------ Headings ----------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'LatoLight';
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 > span {
+    font-family: 'AusthinaBrush';
+    text-transform: lowercase;
+    vertical-align: bottom;
+}
+
+
+/* --------------------------------------------- */
+/* -------------------- Header ----------------- */
+header {
+    background-color: #FFF;
+    height: 80px;
+    position: fixed;
+    transition: top 0.2s ease-in-out;
+/*    z-index: 999;*/
+}
+
+.nav-down {
+    position: fixed;
+    top: 0;
+}
+
+.nav-up {
+    top: -80px; /* same as height of header */
+}
+
+header > div {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .logo img {
+    padding-top: 7px;
+}
+
+header .logo img {
+    width: 75px;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.logoText {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoText > h1 {
+    padding-bottom: 0;
+    margin-top: 9px;
+    margin-bottom: 7px;
+}
+
+.logoText > p {
+    font-family: 'AusthinaBrush', cursive;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header a {
+    text-decoration: none;
+}
+
+#hamMenu {
+    margin-left: 20px;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #303030;
+    color: #FFF;
+    border-bottom: 2px solid rgb(30, 30, 30, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 1.3em;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 1.5em;
+    font-family: 'LatoLight';
+}
+
+nav ul li:not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.active {
+    color: #869e40;
+}
+
+nav ul li:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.5em;
+}
+
+nav ul li:last-child a:first-child {
+    padding-right: 20px;
+}
+
+nav ul li:last-child a:last-child {
+    padding-left: 20px;
+    border-left: 0.2px solid #000000;
+}
+
+
+/* --------------------------------------------- */
+/* ------------------ search bar --------------- */
+#intro .dbSearch,
+header .dbSearch {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro .dbSearch input[type="text"],
+header .dbSearch input[type="text"] {
+    height: 35px;
+    padding: 10px;
+    margin-right: 0;
+    border: 1px solid transparent;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+#intro .dbSearch {
+    margin-bottom: 30px;
+}
+
+#intro .dbSearch input[type="text"] {
+    width: calc(90% - 50px);
+    width: -moz-calc(90% - 50px); /* Firefox */
+    width: -webkit-calc(90% - 50px); /* Safari */
+    width: -o-calc(90% - 50px); /* Opera */
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#intro .dbSearch {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+header .dbSearch input[type="text"] {
+    background-color: #e3e3e3;
+}
+
+#intro .dbSearch button,
+header .dbSearch button {
+    height: 35px;
+    color: #FFF;
+    background: rgba(134, 158, 64, 0.7);
+    min-width: 50px;
+    padding: 11px;
+    margin-left: 0;
+    border: 1px solid transparent;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+
+/* styling autocomplete ul element */
+.ui-menu,
+.ui-widget, 
+.ui-widget-content,
+.ui-autocomplete,
+.ui-front {
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(227, 227, 227, 0.7);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: fixed;
+    top: -2px;   
+    transition: top 0.2s ease-in-out;
+}
+
+/* autocomplete list with links */
+.ui-menu-item,
+.ui-menu-item > div {
+    padding: 5px;
+    transition: top 0.2s ease-in-out;
+}
+
+.ui-menu-item > div:hover {
+    background-color: #e3e3e3;
+    border: none;
+}
+
+
+/* --------------------------------------------- */
+/* ---------------- intro section -------------- */
+#intro {
+    background-image: url('../assets/images/hpImage.jpg');
+    min-height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro > div {
+    width: 90%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro .overlayText {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px rgba(50,50,50,0.25);
+    text-align: justify;
+}
+
+#intro .overlayText p:nth-of-type(2) {
+    text-align: center;
+}
+
+
+/* --------------------------------------------- */
+/* ------------ meal planner section ----------- */
+#mealPlan > div {
+    width: 90%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mealPlan .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mealPlan .form div {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#mealPlan .form input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#mealPlan .form label {
+    font-family: 'LatoLight';
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+#mealPlan .form button {
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-family: 'LatoBold';
+    color: #FFF;
+    background-color: #869e40;
+}
+
+/* sidebar with meal times */
+#calWithWeek {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.siteTab {
+    width: 40px;
+}
+
+.mealCat {
+    width: 40px;
+    padding: 5px;
+    border-right: 3px solid #FFF;
+}
+
+.mealCat:nth-of-type(1) {
+    margin-top: 30px;
+    height: 90px;
+}
+
+.mealCat:not(:nth-of-type(1)) {
+    height: 140px;
+    background-color: #f0c948;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mealCat:nth-of-type(2) {
+    border-top-left-radius: 5px;
+}
+
+.mealCat:nth-of-type(3) {
+    border-top: 5px solid #FFF;
+    border-bottom: 5px solid #FFF;
+}
+
+.mealCat:nth-of-type(4) {
+    border-bottom-left-radius: 5px;
+}
+
+.mealCat > p {
+    color: #FFF;
+    font-family: 'LatoBold';
+    transform: rotate(270deg);
+    white-space: nowrap;
+}
+
+/* calendar tabs */
+#mealPlan .weekday,
+#mealPlan .mealtime,
+#mealPlan .calendarSection,
+#weeklyCalendar {
+    width: 100%;
+}
+
+.weekday {
+    height: 90px;
+    font-family: LatoBold;
+}
+
+.calendarSection {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendarSection:not(:first-of-type) {
+    display: none; /* hide all but the first calendar section on mobile */
+}
+
+.fa-sync-alt {
+    color: #848484;
+}
+
+.weekday,
+.mealtime {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekday {
+    background-color: #f0c948;
+    color: #FFF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.weekday > *,
+.mealtime > * {
+    padding: 10px;
+}
+
+.mealtime {
+    min-height: 140px !important; 
+    background-color: rgb(240, 201, 72, 0.2);
+}
+
+.recipe {
+    margin-top: 0;
+    padding-top: 0;
+    min-height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.recipe > a {
+    text-decoration: none;
+    color: #303030;
+}
+
+.lunch {
+    background-color: rgb(227, 227, 227, 0.8);
+    border-top: 5px solid #FFF;
+    border-bottom: 5px solid #FFF;
+}
+
+.dinner {
+/*    border-bottom-left-radius: 8px;*/
+    border-bottom-right-radius: 8px;
+}
+
+
+/* --------------------------------------------- */
+/* ------------------ footer ------------------- */
+footer {
+    background-color: #303030;
+    color: #FFF;
+}
+
+footer > div {
+    width: 90%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer > div > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .socialButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .socialButtons > div {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .contactForm {
+    width: 100%;
+    margin-top: 30px;
+}
+
+footer .contactForm > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+footer .contactForm > div > input[type=text], 
+footer .contactForm > div > textarea, 
+footer .contactForm > div > button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;    
+    border-radius: 5px;
+}
+
+footer .contactForm > div > input[type=text], 
+footer .contactForm > div > textarea {
+    border: 1px solid #e3e3e3;
+    background-color: transparent;
+    color: #e3e3e3;
+}
+
+footer .contactForm > div > input[type=text]::placeholder,
+footer .contactForm > div > textarea::placeholder {
+    color: #e3e3e3;
+}
+
+footer .contactForm :-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #e3e3e3;
+}
+
+footer .contactForm :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #e3e3e3;
+   opacity:  1;
+}
+
+footer .contactForm ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #e3e3e3;
+   opacity:  1;
+}
+
+footer .contactForm :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #e3e3e3;
+}
+footer .contactForm ::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #e3e3e3;
+}
+
+footer .contactForm > div > textarea {
+    height: 150px;
+    resize: none;
+}
+
+footer .contactForm > div > button {
+    border: 1px solid #FFF;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.contactMessage {
+    min-height: 30px; /* so there's no jump when the message appears */
+}
+
+.error {
+    border: 1px solid #FF0000 !important; /* class added to contactForm input in JS if input doesn't pass validation */
+}
+
+.copyright {
+    font-size: 0.8em;
+}
+
+
+/* --------------------------------------------- */
+/* --------------------- small ----------------- */
+
+@media (max-width: 500px) {
+    header .logoText h1 {
+        font-size: 2em;
+    }
+    
+    header .logoText p {
+        font-size: 0.8em;
+    }
+    
+    header .logoImg {
+        width: 75px;
+        margin-left: 0px;
+/*        padding-top: 5px;*/
+    }
+    
+    header .logoImg img {
+        width: 75px;
+    }
+    
+    header .logoText {
+        margin-left: 0px;
+    }
+}
+
+
+/* --------------------------------------------- */
+/* --------------- big screens ----------------- */
+@media (min-width: 1100px) {
+    .desktopShow {
+        display: flex !important;
+    }
+    
+    #hamMenu {
+        display: none;
+    }
+    
+    nav {
+        width: 30%;
+        position: inherit;
+        background-color: #FFF;
+        border: none;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+    }
+    
+    nav ul li {
+        font-size: 1.1em;
+        border: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 30px;
+        margin-right: 30px;
+        border: none !important;
+    }
+    
+    nav ul li a {
+        color: #303030;
+        transition-property: color;
+        transition-duration: 1s;
+    }
+
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+    
+    nav ul li:last-child a {
+        padding: 0;
+        margin: 0;
+        font-size: 0.6em;
+    }
+    
+    nav ul li:last-child a:first-child {
+        padding-right: 5px;
+    }
+    
+    nav ul li:last-child a:last-child {
+        padding-left: 5px;
+        border-left: 0.2px solid #303030;
+    }
+    
+    nav ul li a:hover {
+        color: #869e40;
+    }
+}
+
+
+/* --------------------------------------------- */
+/* ----------------- desktop ------------------- */
+
+@media (min-width: 850px) {
+    /* ---------------------------- */
+    /* ---------- general --------- */
+    .tabletHidden,
+    .desktopHidden {
+        display: none;
+    }
+
+    .mobileHidden,
+    .tabletShow {
+        display: flex;
+    }
+
+    .tabletHidden {
+        display: none;
+    }
+    
+    /* ---------------------------- */
+    /* ----------- Header --------- */
+    header .logo {
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logoImg {
+        padding-right: 25px;
+    }
+    
+    .logoText {
+        padding-left: 25px;
+    }
+
+    
+    /* ---------------------------- */
+    /* ---------- search ---------- */
+    header .dbSearch input {
+        order: -1;
+        align-self: center;
+        width: 250px;
+    }
+    
+    header .dbSearch button {
+        transition-property: background-color;
+        transition-duration: 1s;
+    }
+    
+    header .dbSearch button:hover {
+        background-color: #FFF;
+        color: #869e40;
+        border: 1px solid #869e40;
+        cursor: pointer;
+    }
+    
+    /* ---------------------------- */
+    /* ----------- intro ---------- */
+    #intro {
+        min-height: 600px;
+    }
+    
+    #intro .overlayText {
+        max-width: 400px;
+    }
+    
+    /* ---------------------------- */
+    /* --------- mealPlan --------- */
+    #mealPlan .planGenerator {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #mealPlan .planGenerator .form {
+        width: 60%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #mealPlan .form button {
+        width: 30%;
+        transition-property: background-color;
+        align-self: center;
+        transition-duration: 1s;
+    }
+    
+    #mealPlan .form button:hover {
+        border: 1px solid #869e40;
+        color: #869e40;
+        background-color: #FFF;
+        cursor: pointer;
+    }
+    
+    .fa-chevron-right,
+    .fa-chevron-left {
+        display: none;
+    }
+    
+    .mealCat {
+        border: 3px solid #FFF;
+    }
+    
+    #weeklyCalendar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .weekday,
+    .mealtime {
+        justify-content: center;
+        border-radius: 0;
+        border: 3px solid #FFF;
+    }
+    
+    .mealtime .fa-sync-alt:hover {
+        cursor: pointer;
+    }
+    
+    .recipe {
+        min-height: 70px;
+    }
+    
+    /* adding rounded corners to relevant sections for coherent look */
+    .monday {
+        border-top-left-radius: 5px;
+    }
+    
+    .sunday {
+        border-top-right-radius: 5px;
+    }
+/*
+    
+    .calendarSection:nth-of-type(1) .dinner {
+        border-bottom-left-radius: 5px;
+    }
+*/
+    
+    .calendarSection:nth-of-type(7) .dinner {
+        border-bottom-right-radius: 5px;
+    }
+
+    .mealtime {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .mealtime .fa-sync-alt {
+        padding-bottom: 0;
+        padding-left: 0;
+        order: -1;
+        align-self: flex-end;
+    }
+    
+    .calendarSection {
+        display: flex !important;
+        width: 20%;
+    }
+    
+    /* ---------------------------- */
+    /* ---------- footer ---------- */
+    footer > div {
+        flex-direction: column;
+    }
+    
+    footer > div > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    footer > div > div > .socialButtons {
+        width: 20%;
+    }
+    
+    footer > div > div .socialButtons div {
+        justify-content: center;
+    }
+    
+    footer > div > div .socialButtons div span {
+        padding: 10px;
+    }
+    
+    footer > div > div .contactForm {
+        width: 70%;
+    }
+    
+    footer > div > div .contactForm > div {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer > div > div .contactForm > div > input[type=text],
+    footer .contactForm > div > textarea,
+    footer .contactForm > div > #contactButton {
+        height: 40px;
+        width: 30%;
+    }
+    
+    footer > div > div contactForm > div > textarea {
+        height: 40px;
+    }
+    
+    footer > div > div .contactForm > div > button {
+        -webkit-transition: background-color 1s;
+        transition: background-color 1s, border 1s, color 1s;
+    }
+    
+    footer > div .contactForm p {
+        text-align: center;
+    }
+
+    footer > div > div .contactForm > div > button:hover {
+        cursor: pointer;
+        color: #303030;
+        border: 1px solid transparent;
+        background-color: #FFF;
+    }
+}
+
+
+@media print {
+    /* general */
+    /* hide irrelevant areas, rotate main so default mode is landscape */    
+    main {
+        -webkit-print-color-adjust: exact;
+        -webkit-transform: rotate(-90deg); 
+        -moz-transform:rotate(-90deg);
+        filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    
+    #hamMenu,
+    #intro,
+    .dbSearch,
+    .planGenerator,
+    footer {
+        display: none;
+    }
+    
+    .nav-down {
+        display: flex;
+    }
+    
+    .logo,
+    .logoImg,
+    .logoImg > img,
+    .logoText {
+        display: block;
+    }
+    
+    header {
+        margin-top: 80px;
+        margin-bottom: 100px;
+        border-bottom: 1px solid #303030;
+    }
+    
+    footer, 
+    main, 
+    section {
+        border: 1px solid transparent;
+    }
+    
+    /* ---------------------------- */
+    /* --------- mealPlan --------- */
+    .fa-chevron-right,
+    .fa-chevron-left {
+        display: none;
+    }
+    
+    #calWithWeek {
+        width: 100%
+    }
+    
+    #calWithWeek .siteTab {
+        width: 10%;
+/*        height: 10%;*/
+    }
+    
+    #weeklyCalendar {
+        width: 80%;
+/*        height: 90%;*/
+/*        margin-top: 150px;*/
+/*        margin-right: 100px;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+      
+    .mealCat {
+        position: absolute !important;
+        left: -175px !important;
+/*        top: 0px !important;*/
+/*        justify-self: flex-start;*/
+/*        align-self: flex-end;*/
+/*        align-self: baseline;*/
+/*        margin-top: 220px;*/
+/*        margin-bottom: 500px;*/
+/*        padding-right: 1200px;*/
+    }
+    
+    .mealCat:nth-of-type(2) {
+        top: 360px;
+    }
+    
+    .mealCat:nth-last-of-type(3) {
+        top: 380px;
+    }
+    
+    .mealCat:nth-of-type(4) {
+        top: 500px;
+    }
+    
+    .weekday,
+    .mealtime {
+        justify-content: center;
+        border-radius: 0;
+        border: 3px solid #FFF;
+    }
+    
+    .lunch {
+        background-color: #e3e3e3;
+    }
+    
+    .weekday {
+        background-color: #f0c948;
+    }
+
+    .recipe {
+        min-height: 70px;
+    }
+
+    /* adding rounded corners to relevant sections for coherent look */
+    .monday {
+        border-top-left-radius: 5px;
+    }
+    
+    .sunday {
+        border-top-right-radius: 5px;
+    }
+    
+    .calendarSection:nth-of-type(1) .dinner {
+        border-bottom-left-radius: 5px;
+    }
+    
+    .calendarSection:nth-of-type(7) .dinner {
+        border-bottom-right-radius: 5px;
+    }
+    
+    .mealtime {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .mealtime .fa-sync-alt {
+        display: none;
+    }
+    
+    .calendarSection {
+        display: flex !important;
+        width: 30%;
+    }
+}

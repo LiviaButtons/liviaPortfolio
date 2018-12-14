@@ -1,0 +1,622 @@
+/** {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+html {
+    width: 100%;
+    font-family: "LatoLight", sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #404040;
+}
+
+body, 
+header, 
+main,
+section, 
+footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}*/
+
+/*header, section {
+    border-bottom: 1px solid rgb(30, 30, 30, 0.5);
+}*/
+
+header{
+    /*border-bottom: 1px solid rgb(30, 30, 30, 0.5);*/
+    border-bottom: 1px solid #707070;
+    z-index: 999;                  /***************************************rajoute*****/
+}
+
+/*main {
+    margin-top: 90px;
+}*/
+
+.mobileHidden,
+.tabletHidden,
+.hidden {
+    display: none;
+}
+
+/* --------------------------------------------- */
+/* ------------------- fonts ------------------- */
+
+@font-face {
+    font-family: AusthinaBrush;
+    src: url(../assets/fonts/AusthinaBrushCalligraphyScratch/AusthinaBrushCalligraphyScratch.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../assets/fonts/Lato2OFL/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: LatoLight;
+    src: url(../assets/fonts/Lato2OFL/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: LatoBold;
+    src: url(../assets/fonts/Lato2OFL/Lato-Bold.ttf);
+}
+
+
+/* --------------------------------------------- */
+/* ------------------ Headings ----------------- */
+h1,
+h2,
+/*h3,*/
+h4,
+h5,
+h6 {
+    font-family: 'LatoLight';
+    text-transform: uppercase;
+}
+
+
+/* --------------------------------------------- */
+/* -------------------- Header ----------------- */
+header {
+    background-color: #FFF;
+    /*height: 90px; */                            /*reel*******************************/
+    height: 80px;
+    position: fixed;
+    transition: top 0.2s ease-in-out;
+}
+
+.nav-down {
+    position: fixed;
+    top: 0;
+}
+
+.nav-up {
+    top: -90px; /* same as height of header */
+}
+
+header > div {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header img {
+    width: 75px;           /*****************************modif*/
+    /*width: 80px;*/  
+    margin: 0;
+    padding-right: 10px;
+}
+
+.logoText {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoText > h1 {
+    padding-bottom: 0;
+    /*margin-bottom: 5px; */                   /*******reel modif en bas***/
+    margin-bottom: 15px;                          /*modif***************/
+}
+
+.logoText > p {
+    font-family: 'AusthinaBrush', cursive;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+header a {
+    text-decoration: none;
+}
+
+#hamMenu {
+    margin-left: 20px;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #303030;
+    color: #FFF;
+    border-bottom: 2px solid rgb(30, 30, 30, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 1.3em;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 1.5em;
+    font-family: 'LatoLight';                   /*********************Mis en LatoLight à la place de Lato*/
+}
+
+nav ul li:not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.active {
+    color: #869e40;
+}
+
+nav ul li:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.5em;    /**************************************************rajoute*/
+}
+
+nav ul li:last-child a:first-child {
+    padding-right: 20px;
+}
+
+nav ul li:last-child a:last-child {
+    padding-left: 20px;
+    border-left: 0.2px solid #000000;
+}
+
+
+/* --------------------------------------------- */
+/* ------------------ search bar --------------- */
+
+header .dbSearch {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+header .dbSearch input[type="text"] {
+    /*height: 40px;*/                                  /**************reel modif en bas*/
+    height: 35px;
+    padding: 10px;
+    margin-right: 0;
+    border: 1px solid transparent;
+    /*border-top-left-radius: 5px;  */                           /********reel en bas modif**/
+    border-top-left-radius: 40px;
+    /*border-bottom-left-radius: 5px;  */                                      /********reel en bas modif**/
+    border-bottom-left-radius: 40px;
+}
+
+
+
+
+header .dbSearch input[type="text"] {
+    background-color: #e3e3e3;
+}
+
+header .dbSearch button {
+    color: #FFF;
+    background: rgba(134, 158, 64, 0.7);
+    min-width: 50px;
+    padding: 11px;
+    margin-left: 0;
+    border: 1px solid transparent;
+    /*border-top-right-radius: 5px;*/
+    border-top-right-radius: 40px;
+    /*border-bottom-right-radius: 5px;*/
+    border-bottom-right-radius: 40px;
+    height: 35px; /**********************************rajoute*/
+}
+
+/* styling autocomplete ul element */
+.ui-menu,
+.ui-widget, 
+.ui-widget-content,
+.ui-autocomplete,
+.ui-front {
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(227, 227, 227, 0.7);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: fixed;
+    top: -2px;   
+    z-index: 999999999999999;
+}
+
+/* autocomplete list with links */
+.ui-menu-item,
+.ui-menu-item > div {
+    padding: 5px;
+    z-index: 999999999999999;
+}
+
+.ui-menu-item > div:hover {
+    background-color: #e3e3e3;
+    border: none;
+    z-index: 999999999999999;
+}
+
+
+
+/* --------------------------------------------- */
+/* ------------------ footer ------------------- */
+footer {
+    background-color: #303030;
+    color: #FFF;
+}
+
+footer > div {
+    width: 90%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer > div > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .socialButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .socialButtons > div {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .contactForm {
+    width: 100%;
+    margin-top: 30px;
+}
+
+footer .contactForm > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+footer .contactForm > div > input[type=text], 
+footer .contactForm > div > textarea, 
+footer .contactForm > div > button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;    
+    border-radius: 5px;
+}
+
+footer .contactForm > div > input[type=text], 
+footer .contactForm > div > textarea {
+    border: 1px solid #e3e3e3;
+    background-color: transparent;
+    color: #e3e3e3;
+}
+
+footer .contactForm > div > input[type=text]::placeholder,
+footer .contactForm > div > textarea::placeholder {
+    color: #e3e3e3;
+}
+
+footer .contactForm :-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #e3e3e3;
+}
+
+footer .contactForm :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #e3e3e3;
+   opacity:  1;
+}
+
+footer .contactForm ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #e3e3e3;
+   opacity:  1;
+}
+
+footer .contactForm :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #e3e3e3;
+}
+footer .contactForm ::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #e3e3e3;
+}
+
+footer .contactForm > div > textarea {
+    height: 150px;
+    resize: none;
+}
+
+footer .contactForm > div > button {
+    border: 1px solid #FFF;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.contactMessage {
+    min-height: 30px; /* so there's no jump when the message appears */
+}
+
+.error {
+    border: 1px solid #FF0000 !important; /* class added to contactForm input in JS if input doesn't pass validation */
+}
+
+.copyright {
+    font-size: 0.8em;
+}
+
+
+
+/* --------------------------------------------- */
+/* --------------------- small ----------------- */
+
+@media (max-width: 500px) {
+    header .logoText h1 {
+        font-size: 2em;
+    }
+    
+    header .logoText p {
+        font-size: 1em;
+    }
+    
+    header .logoImg {
+        width: 75px;;
+        margin-left: 0px;
+    }
+    
+    header .logoImg img {
+        width: 75px;
+    }
+    
+    header .logoText {
+        margin-left: 0px;
+    }
+}
+
+
+/* --------------------------------------------- */
+/* --------------- big screens ----------------- */
+@media (min-width: 1100px) {
+    .desktopShow {
+        display: flex !important;
+    }
+    
+    #hamMenu {
+        display: none;
+    }
+    
+    nav {
+        width: 30%;
+        position: inherit;
+        background-color: #FFF;
+        border: none;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+    }
+    
+    nav ul li {
+        font-size: 1.1em;
+        border: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 30px;
+        margin-right: 30px;
+        border: none !important;
+    }
+    
+    nav ul li a {
+        color: #303030;
+        transition-property: color;
+        transition-duration: 1s;
+    }
+
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+    
+    nav ul li:last-child a {
+        padding: 0;
+        margin: 0;
+        font-size: 0.6em;
+    }
+    
+    nav ul li:last-child a:first-child {
+        padding-right: 5px;
+    }
+    
+    nav ul li:last-child a:last-child {
+        padding-left: 5px;
+        border-left: 0.2px solid #303030;
+    }
+    
+    nav ul li a:hover {
+        color: #869e40;
+    }
+}
+
+
+/* --------------------------------------------- */
+/* ----------------- desktop ------------------- */
+
+@media (min-width: 850px) {
+    /* ---------------------------- */
+    /* ---------- general --------- */
+    .tabletHidden,
+    .desktopHidden {
+        display: none;
+    }
+
+    .mobileHidden,
+    .tabletShow {
+        display: flex;
+    }
+
+    .tabletHidden {
+        display: none;
+    }
+    
+    /* ---------------------------- */
+    /* ----------- Header --------- */
+    header .logo {
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logoImg {
+        padding-right: 25px;
+    }
+    
+    .logoText {
+        padding-left: 25px;
+    }
+
+    
+    /* ---------------------------- */
+    /* ---------- search ---------- */
+    header .dbSearch input {
+        order: -1;
+        align-self: center;
+        width: 250px;
+    }
+    
+    header .dbSearch button {
+        transition-property: background-color;
+        transition-duration: 1s;
+    }
+    
+    header .dbSearch button:hover {
+        background-color: #FFF;
+        color: #869e40;
+        border: 1px solid #869e40;
+        cursor: pointer;
+    }
+   
+   
+    /* ---------------------------- */
+    /* ---------- footer ---------- */
+    footer > div {
+        flex-direction: column;
+    }
+    
+    footer > div > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    footer > div > div > .socialButtons {
+        width: 20%;
+    }
+    
+    footer > div > div .socialButtons div {
+        justify-content: center;
+    }
+    
+    footer > div > div .socialButtons div span {
+        padding: 10px;
+    }
+    
+    footer > div > div .contactForm {
+        width: 70%;
+    }
+    
+    footer > div > div .contactForm > div {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    footer > div > div .contactForm > div > input[type=text],
+    footer .contactForm > div > textarea,
+    footer .contactForm > div > #contactButton {
+        height: 40px;
+        width: 30%;
+    }
+    
+    footer > div > div contactForm > div > textarea {
+        height: 40px;
+    }
+    
+    footer > div > div .contactForm > div > button {
+        -webkit-transition: background-color 1s;
+        transition: background-color 1s, border 1s, color 1s;
+    }
+    
+    footer > div .contactForm p {
+        text-align: center;
+    }
+
+    footer > div > div .contactForm > div > button:hover {
+        cursor: pointer;
+        color: #303030;
+        border: 1px solid transparent;
+        background-color: #FFF;
+}
+}
