@@ -51,6 +51,7 @@ header {
   padding-top: 0; }
 
 main {
+  padding-top: 80px;
   margin-top: 80px; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #2d909c; }
 
 h2 {
+  margin-bottom: 80px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -183,10 +185,13 @@ h2 {
     border: 1px solid #FFF; }
 #portfolio .portfolio-section .port-box .portfolio-item {
   height: 250px;
-  margin: 5px;
+  margin: 15px 0px 15px 0px;
   box-shadow: #d6d6d6 0px 0px 15px 3px, #d6d6d6 0px 0px 15px 3px; }
 #portfolio .portfolio-section .port-box .portfolio-first {
   background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
+  background-size: cover; }
+#portfolio .portfolio-section .port-box .portfolio-third {
+  background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
   background-size: cover; }
 #portfolio .portfolio-section img {
   max-width: 100%;
@@ -215,8 +220,7 @@ h2 {
   margin-bottom: 10px;
   min-height: 350px;
   box-shadow: #d6d6d6 0px 0px 15px 3px, #d6d6d6 0px 0px 15px 3px;
-  padding: 30px;
-  border-radius: 8px; }
+  padding: 30px; }
   .about-box div {
     display: flex;
     flex-direction: row;

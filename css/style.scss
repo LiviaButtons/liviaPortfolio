@@ -73,6 +73,7 @@ header {
 }
 
 main {
+    padding-top: 80px;
     margin-top: 80px;
 }
 
@@ -82,6 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
+    margin-bottom: 80px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -264,12 +266,17 @@ h2 {
         .port-box {
             .portfolio-item {
                 height: 250px;
-                margin: 5px;
+                margin: 15px 0px 15px 0px;
                 box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
             }
             
             .portfolio-first {
                 background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
+                background-size: cover;
+            }
+            
+            .portfolio-third {
+                background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
                 background-size: cover;
             }
         }
@@ -315,7 +322,6 @@ h2 {
     min-height: 350px;
     box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
     padding: 30px;
-    border-radius: 8px;
     
     div {
         display: flex;
