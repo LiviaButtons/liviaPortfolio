@@ -60,7 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   text-align: center;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  /* the lines around the h2 */ }
   h2:before {
     border-top: 2px solid #2d909c;
     content: "";
@@ -75,7 +76,7 @@ h2 {
     width: 100%;
     z-index: -1; }
   h2 span {
-    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+    /* to hide the lines from behind the text, set the background color the same as the container */
     font-family: "LatoBold", sans-serif;
     color: #2d909c;
     background: #fff;
@@ -190,6 +191,12 @@ h2 {
 #portfolio .portfolio-section img {
   max-width: 100%;
   max-height: 100%; }
+#portfolio .portfolio-section .modal-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
 #portfolio .portfolio-section .demo-img {
   padding: 0; }
 #portfolio .portfolio-section .demo-buttons {

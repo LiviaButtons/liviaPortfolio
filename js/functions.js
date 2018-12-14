@@ -38,18 +38,18 @@ $(document).ready(function (event) {
         
         if ($($clicked).attr('id') == 'web') {
             // hide everything, show web
-            $('.port-box').hide();
-            $('.js-web').show();
+            $('.js-design').hide(500);
+            $('.js-web').show(500);
         } else if ($($clicked).attr('id') == 'design') {
             // hide everything, show design
-            $('.port-box').hide();
-            $('.js-design').show();
+            $('.js-web').hide(500);
+            $('.js-design').show(500);
         } else {
             // Show all
-            $('.port-box').show();
+            $('.port-box').show(500);
         }
         
-        // next step: animation on show/hide
+        // next step: animation on show/hide??
     });
     
     
