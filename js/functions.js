@@ -55,9 +55,9 @@ $(document).ready(function (event) {
     
     // --------------------------
     // Function to change active class while scrolling
-    $(document).on("scroll", onScroll);
+//    $(document).on("scroll", onScroll);
     
-    function onScroll (event) {
+//    function onScroll (event) {
 //        console.log ('you scrolled');
 //		$scrollPosition = $(document).scrollTop();
 //		
@@ -72,5 +72,5 @@ $(document).ready(function (event) {
 //				currentLink.removeClass("active");
 //			}
 //		});
-	}
+//	}
 });

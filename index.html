@@ -9,11 +9,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Bootstrap JS -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="./js/jquery.magnific-popup.min.js"></script>
         <!-- custom JS -->
         <script src="./js/functions.js"></script>
         
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="./css/magnific-popup.css">
         <!-- custom CSS -->
         <link rel="stylesheet" href="./css/style.css">
     </head>
@@ -54,38 +57,103 @@
                     <button id="design" class="port-button">Design</button>
                 </div>
                 
-                <div class="row col-xs-10 col-xs-offset-1">    
-                    <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div class="col-xs-12 portfolio-item" style="background-color:#e3e3e3; height: 300px; margin: 5px;">
-
+                <div class="row col-xs-10 col-xs-offset-1 portfolio-section">    
+                    <div class="col-md-2 col-lg-4 port-box js-web">
+                        <div class="col-xs-12 portfolio-item portfolio-first" data-toggle="modal" data-target="#modal1">
+                            <!-- thumbnail that will open the modal -->
+                        </div>
+                        
+                        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="modalLabel">Weekly's</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <div class="col-xs-12 demo-img">
+                                                <img src="./assets/portfolio/weekly/weekly-desktop.png" alt="Weekly's desktop homepage">
+                                            </div>
+                                            <div class="col-md-7">
+                                                <h4>About this project</h4>
+                                                <p>
+                                                    This is a school project completed over a period of two months in a group of four. The brief? Create a website from scratch, based on an original idea, brand, and concept. We decided to build a recipe website, but with an additional feature that would set us apart from the competition online: a generator for a weekly calendar to build a menu for the week. Our target audience? Young people and families who want to take the stress out of cooking and having to plan meals.
+                                                </p>
+                                                
+                                                <p>
+                                                    Once the concept was decided, we prepared a project brief and built the brand (logo, name, tagline, colours), as well as a prototype in Adobe XD to test the look and user experience of the future website. Then, we built the database and responsive website in about 2-3 weeks. 
+                                                </p>
+                                                
+                                                <p>
+                                                    Features I built include:
+                                                </p>
+                                                    <ul>
+                                                        <li>search function with autocomplete</li>
+                                                        <li>calendar generator</li>
+                                                        <li>mobile hamburger menu</li>
+                                                        <li>mobile calendar</li>
+                                                        <li>contact form with validation in JS and PHP</li>
+                                                    </ul>
+                                            </div>
+                                            
+                                            <div class="col-md-5">
+                                                <h4>Technologies used</h4>
+                                                <ul>
+                                                    <li>HTML</li>
+                                                    <li>CSS</li>
+                                                    <li>jQuery</li>
+                                                    <li>PHP</li>
+                                                    <li>SQL</li>
+                                                    <li>phpMyAdmin</li>
+                                                    <li>Adobe XD, Illustrator, PhotoShop</li>
+                                                    <li>GitHub and Git</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="col-md-5 demo-buttons">
+                                                <a class="btn btn-primary" href="https://github.com/LiviaButtons/Weeklys" alt="link to Github">Github repository</a>
+                                                <a class="btn btn-primary" href="https://liviabuttons.github.io/Weeklys" alt="link to demo version">See demo</a>
+                                            </div>
+                                            
+                                            <div class="col-xs-12 demo-img">
+                                                <img src="./assets/portfolio/weekly/weekly-mobile.png" alt="Weekly's mobile homepage">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-md-2 col-lg-4 port-box js-web">
-                        <div class="col-xs-12 portfolio-item" style="background-color:#e3e3e3; height: 300px; margin:5px;">
+                        <div class="col-xs-12 portfolio-item" data-toggle="modal" data-target="#exampleModal">
                             
                         </div>
                     </div>
 
                     <div class="col-md-2 col-lg-4 port-box js-web">
-                        <div class="col-xs-12 portfolio-item" style="background-color:#e3e3e3; height: 300px; margin: 5px;">
+                        <div class="col-xs-12 portfolio-item" data-toggle="modal" data-toggle="modal" data-target="#exampleModal">   
+                        
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-2 col-lg-4 port-box js-design">
+                        <div class="col-xs-12 portfolio-item" data-toggle="modal" data-target="#exampleModal">
                             
                         </div>
                     </div>
 
                     <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div class="col-xs-12 portfolio-item" style="background-color:#e3e3e3; height: 300px; margin: 5px;">
-                            
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div class="col-xs-12 portfolio-item" style="background-color:#e3e3e3; height: 300px; margin: 5px;">
+                        <div class="col-xs-12 portfolio-item" data-toggle="modal" data-target="#exampleModal">
                             
                         </div>
                     </div>
                     <div class="col-md-2 col-lg-4 port-box js-web">
-                        <div class="col-xs-12 portfolio-item" style="background-color:#e3e3e3; height: 300px; margin: 5px;">
+                        <div class="col-xs-12 portfolio-item" data-toggle="modal" data-target="#exampleModal">
                             
                         </div>
                     </div>
