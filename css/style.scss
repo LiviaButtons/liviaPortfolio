@@ -31,11 +31,15 @@ $text-font: 'Lato', sans-serif;
 
 /* --------------------------------------------------- */
 /* --------------------- General --------------------- */
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
 html * {
     font-family: $text-font;
     line-height: 1.5em;
     color: $dark-grey;
-    scroll-behavior: smooth;
     
     p, ul, li {
         font-size: 16px;
@@ -106,6 +110,17 @@ h2 {
         background: #fff; 
         padding: 0 15px; 
     }
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------- header ---------------------- */
+.header-img {
+    min-height: 500px;
+    background-image: url(../assets/img/header-img.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
@@ -272,17 +287,30 @@ h2 {
             
             .portfolio-first {
                 background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
-                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
             }
             
             .portfolio-third {
                 background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
-                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            
+            .portfolio-four {
+                background-image: url(../assets/portfolio/octopus/octo-thumb.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
             }
             
             .portfolio-five {
                 background-image: url(../assets/portfolio/pixabayPhotography/pixabay-thumb.png);
-                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
             }
         }
         
@@ -366,10 +394,10 @@ h2 {
 /* ---------------------- Footer --------------------- */
 footer {
     background-color: $main-teal;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
     
     ::-moz-selection { /* Code for Firefox */
         color: $main-teal;
@@ -398,6 +426,8 @@ footer {
         img {
             width: 50px;
             height: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
             border: 1px solid #FFF;
             border-radius: 50px;
         }
@@ -431,9 +461,21 @@ footer {
             color: #FFF;
             margin-right: 15px;
         }
+        
+        .contactMessage {
+            text-align: center;
+            color: #FFF;
+        }
+        
+        .error {
+            border: 1px solid #FF0000;
+        }
     }
     
     p {
+//        padding-top: 15px;
+//        border-top: 1px solid #FFF;
+        text-align: center;
         margin: 15px;
         color: #FFF;
         font-size: 12px;
