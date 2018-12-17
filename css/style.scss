@@ -272,8 +272,7 @@ h2 {
             color: #FFF;
             background-color: $main-teal;
             border: 1px solid #FFF;
-        }
-        
+        } 
     }
     
     .portfolio-section {
@@ -284,16 +283,14 @@ h2 {
                 box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
                 opacity: 0.5;
                 filter: alpha(opacity=50); /* IE */ 
-//                transition: .5s ease;
             }
             
-//            .portfolio-item:hover {
-//                opacity: 0.3;
-//                
-//                span {
-//                    opacity: 1;
-//                }
-//            }
+            .portfolio-two {
+                background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
             
             .portfolio-first {
                 background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
@@ -323,6 +320,13 @@ h2 {
                 background-size: contain;
             }
             
+            .portfolio-six {
+                background-image: url(../assets/portfolio/easyPie/easy-as-pie.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            
             span {
                 padding: 25px 10px;
                 position: absolute;
@@ -331,7 +335,6 @@ h2 {
                 font-size: 50px;
                 z-index: 10;
                 color: #000;
-//                transition: .5s ease;
                 opacity: 1;
                 position: absolute;
                 top: 50%;
@@ -346,13 +349,17 @@ h2 {
             max-height: 100%;
         }
         
-        .modal-header {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
+//        .modal-header {
+//            width: 100%;
+////            display: flex;
+////            flex-direction: row;
+////            justify-content: space-between;
+////            align-items: center;
+////            text-align: center;
+//        }
+        
+        .close {
+            display: none;
         }
         
         .demo-img {

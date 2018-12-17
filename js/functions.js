@@ -53,17 +53,18 @@ $(document).ready(function (event) {
     
     // --------------------------
     // Function to change active class while scrolling
+    
     var portfolioOffset = $('#portfolio').offset().top;
     var aboutOffset = $('#about').offset().top;
     var contactOffset = $('#contact').offset().top;
-//    
-//    var portfolioHeight = $('#portfolio').height;
-//    console.log (portfolioHeight);
-//    console.log ($(window).height());
-//    var wH = $(window).scrollTop();
-//    console.log (wH);
-//    
-//    console.log (aboutOffset);
+    
+    var portfolioHeight = $('#portfolio').height;
+    console.log (portfolioHeight);
+    console.log ($(window).height());
+    var wH = $(window).scrollTop();
+    console.log (wH);
+    
+    console.log (aboutOffset);
     
     $(window).scroll(function () {
         if ($(window).scrollTop() < portfolioOffset) {
@@ -82,11 +83,11 @@ $(document).ready(function (event) {
             $('#about-link').addClass('active');
         }
     });
-    
+        
     
     // -----------------------------------
     // contact form
-    $(document).ready(function (event) {
+$(document).ready(function (event) {
     $('#contactButton').on('click', function (e) {
         $userEmail = $('#email').val(); // retrieve value for email
         $userMsg = $('#message').val(); // retrieve value for msg
@@ -152,7 +153,6 @@ $(document).ready(function (event) {
             $('.contactMessage').html($msg);    
         };
     });
-
 });
     
 });

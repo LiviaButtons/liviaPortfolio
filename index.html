@@ -17,7 +17,7 @@
         <!-- custom CSS -->
         <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body class="container-fluid">
+    <body id="home" class="container-fluid">
         <header>
             <nav id="nav" class="navbar navbar-default navbar-fixed-top">
                 <div class="container-fluid">
@@ -34,7 +34,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="nav-content">
                         <ul class="nav navbar-nav navbar-right">
-                            <li id="home-link" class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                            <li id="home-link" class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
                             <li id="portfolio-link"><a href="#portfolio">Portfolio</a></li>
                             <li id="about-link"><a href="#about">About</a></li>
                             <li id="contact-link"><a href="#contact">Contact</a></li>
@@ -49,7 +49,7 @@
                 <h2 class="sr-only" hidden>Intro Image</h2>
                 
                 <div class="col-xs-10 col-xs-offset-1 header-img">
-<!--                    <img src="./assets/computer-1245714_1920.jpg" alt="computer img" style="width:100%; max-height:100%;">-->
+                    <!-- header-img added as background in CSS -->
                 </div>
             </section>
              
@@ -148,7 +148,7 @@
                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h3 class="modal-title" id="modalLabel">Logo for Weekly's</h3>
+                                        <h3 class="modal-title" id="modalLabel">Chosen logo for Weekly's</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -156,16 +156,16 @@
                                     <div class="modal-body">
                                         <div class="container-fluid">
                                             <div class="col-xs-12 demo-img">
-                                                <img src="./assets/portfolio/weekly/weekly-desktop.png" alt="Weekly's desktop homepage">
+                                                <img src="./assets/portfolio/weeklyLogo/weekly-logos.svg" alt="Weekly's logo">
                                             </div>
                                             <div class="col-md-7">
                                                 <h4>About this project</h4>
                                                 <p>
-                                                    This is a school project completed over a period of two months in a group of four. The brief? Create a website from scratch, based on an original idea, brand, and concept. We decided to build a recipe website, but with an additional feature that would set us apart from the competition online: a generator for a weekly calendar to build a menu for the week. Our target audience? Young people and families who want to take the stress out of cooking and having to plan meals.
+                                                    This is the logo I created that was used for the group project Weekly's. As we were building a recipe website, the different elements in the logo reflect that: ingredients, a cookbook, and the salad bowl. 
                                                 </p>
                                                 
                                                 <p>
-                                                    Once the concept was decided, we prepared a project brief and built the brand (logo, name, tagline, colours), as well as a prototype in Adobe XD to test the look and user experience of the future website. Then, we built the database and responsive website in about 2-3 weeks. 
+                                                    The logo reflects the colour scheme chosen for the website and used throughout, creating a coherent look for the entire website. It looks fresh and appetising.  
                                                 </p>
                                             </div>
                                             
@@ -365,9 +365,47 @@
                     
                     <!-- sixth portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div class="col-xs-12 portfolio-item" data-toggle="modal" data-target="#exampleModal">
+                        <div class="col-xs-12 portfolio-item portfolio-six" data-toggle="modal" data-target="#modal6">
                             <!-- thumbnail that will open the modal -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
+                        </div>
+                        
+                        <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="modalLabel">Proposed logo "Easy as Pie"</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <div class="col-xs-12 demo-img">
+                                                <img src="./assets/portfolio/easyPie/easyPie-logo.svg" alt="Easy As Pie logos">
+                                            </div>
+                                            <div class="col-md-7">
+                                                <h4>About this project</h4>
+                                                <p>
+                                                    In the early stages of a group project for a recipe website, I proposed this name and logo for the branding of the website. As the key feature of the website is a meal plan generator intended to help our users plan their week and meals, I wanted to highlight the ease of use of the website, and how much easier it would make our users' lives. 
+                                                </p>
+                                                
+                                                <p>
+                                                    I developed several iterations of the log, experimenting with different fonts and design elements.
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="col-md-5">
+                                                <h4>Tools</h4>
+                                                <ul>
+                                                    <li>pen and paper</li>
+                                                    <li>Adobe Illustrator</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -488,7 +526,7 @@
                                 </li>
                                 <li>
                                     <span class="glyphicon glyphicon-ok"></span>
-                                    newsletter design, MailChimp
+                                    Newsletter design, MailChimp
                                 </li>
                             </ul>
                         </div>
