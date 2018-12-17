@@ -236,6 +236,8 @@ h2 {
         li {
             a { 
                 color: #FFF;
+                border-left: 1px solid $main-teal;
+                border-right: 1px solid $main-teal;
             }
         }
     
@@ -500,6 +502,7 @@ footer {
         .contactMessage {
             text-align: center;
             color: #FFF;
+            height: 50px;
         }
         
         .error {
@@ -518,6 +521,13 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+    #nav {
+        li:hover {
+            background-color: $dark-teal;
+        }
+    }
+    
+    
     .portfolio-section {
         .port-box {  
             .portfolio-item {

@@ -47,11 +47,7 @@ $(document).ready(function (event) {
         var aboutOffset = $('#about').offset().top;
         aboutOffset = aboutOffset - 150;
         var contactOffset = $('#contact').offset().top;
-        contactOffset = contactOffset - 200;
-
-        console.log (portfolioOffset, aboutOffset, contactOffset);
-        var wH = $(window).scrollTop();
-        
+        contactOffset = contactOffset - 200;        
         
         if ($(window).scrollTop() < portfolioOffset) {
             // if we're not yet at the height of portfolio
@@ -83,8 +79,7 @@ $(document).ready(function (event) {
         // email can't be blank, must contain @, must contain .
         if ($userEmail != '' && $userEmail.indexOf('@') > 0 && $userEmail.indexOf('.') > 0) {
             $('#email').removeClass('error');
-            $('#email').attr('placeholder', 'Your e-mail');
-    
+            $('#email').attr('placeholder', 'Your e-mail (required)');
         } else {
             // if conditions aren't met, add error class and change placeholder
             $('#email').addClass('error');
@@ -98,7 +93,7 @@ $(document).ready(function (event) {
         // message can't be blank
         if ($userMsg != '') {
             $('#message').removeClass('error');
-            $('#message').attr('placeholder', 'Your message');
+            $('#message').attr('placeholder', 'Your message (required)');
         } else {
             // if condition isn't met, add error class and change placeholder
             $('#message').addClass('error');
@@ -120,11 +115,17 @@ $(document).ready(function (event) {
                     message : $userMsg 
                 },
                 success: function (data) {
-//                    console.log (data)
-                    // perhaps check condition that it returns result: OK
+                    // check whether it returns OK (and not error 1, 2 or 3)
+                    var result = JSON.stringify(data);
                     console.log (data);
-                    $msg = 'Success! Your message has been sent. '
-                    $('.contactMessage').html($msg);
+                    console.log (result);
+                    if (result == "OK") {
+                        $msg = 'Success! Your message has been sent.';
+                        $('.contactMessage').html($msg);
+                    } else {
+                        $msg = 'There was a technical issue.';
+                        $('.contactMessage').html($msg);
+                    }
                 }, 
                 error: function (xhr, status, errorMsg) {
 //                    console.log ('Status: ' + status);

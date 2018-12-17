@@ -170,7 +170,9 @@ h2 {
     #nav .container-fluid button[aria-expanded="false"] {
       background-color: #2d909c; }
   #nav ul li a {
-    color: #FFF; }
+    color: #FFF;
+    border-left: 1px solid #2d909c;
+    border-right: 1px solid #2d909c; }
   #nav ul .active a {
     background-color: #2d535b; }
 
@@ -339,7 +341,8 @@ footer {
     margin-right: 15px; }
   footer .contact-form .contactMessage {
     text-align: center;
-    color: #FFF; }
+    color: #FFF;
+    height: 50px; }
   footer .contact-form .error {
     border: 1px solid #FF0000; }
   footer p {
@@ -349,6 +352,9 @@ footer {
     font-size: 12px; }
 
 @media only screen and (min-width: 768px) {
+  #nav li:hover {
+    background-color: #2d535b; }
+
   .portfolio-section .port-box .portfolio-item {
     opacity: 1 !important;
     transition: .5s ease; }
