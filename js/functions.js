@@ -1,11 +1,11 @@
 // Javascript for my portfolio website
 // Author: Livia Bottoni
 
+$(document).ready(function (event) {
 
 // -------------------------
 // Function for hamburger menu and animation
 // animation based on: https://codepen.io/designcouch/pen/Atyop
-$(document).ready(function (event) {
     // "open" and "close" hamburger Menu upon click
     $('#hamMenu').on("click", function (e) {
         $('#hamMenu').toggleClass('open');
@@ -15,20 +15,7 @@ $(document).ready(function (event) {
         // if any of the navigation links are clicked, close the menu
         $('#hamMenu').toggleClass('open').toggleClass('collapsed');
         $('#nav-content').attr('aria-expanded', 'false').toggleClass('in');
-        
-        // also, change the active attribute to the link that was clicked
-        $('.navbar-nav > *').removeClass('active');
-        $current = e.target;
-        $parent = $($current).parent();
-        $($parent).addClass('active');
-    
-        // next step: change active class when scrolling
-        // AKA: once you pass #portfolio.height, switch the classes 
-        // or something along those lines
-        // also: generally get a scroll effect when navigating menu ----- pure CSS done
-        
     });
-    
     
     
     // ----------------------
@@ -53,20 +40,19 @@ $(document).ready(function (event) {
     
     // --------------------------
     // Function to change active class while scrolling
-    
-    var portfolioOffset = $('#portfolio').offset().top;
-    var aboutOffset = $('#about').offset().top;
-    var contactOffset = $('#contact').offset().top;
-    
-    var portfolioHeight = $('#portfolio').height;
-    console.log (portfolioHeight);
-    console.log ($(window).height());
-    var wH = $(window).scrollTop();
-    console.log (wH);
-    
-    console.log (aboutOffset);
-    
     $(window).scroll(function () {
+        // remove 150px to look nicer
+        var portfolioOffset = $('#portfolio').offset().top;
+        portfolioOffset = portfolioOffset - 150;
+        var aboutOffset = $('#about').offset().top;
+        aboutOffset = aboutOffset - 150;
+        var contactOffset = $('#contact').offset().top;
+        contactOffset = contactOffset - 200;
+
+        console.log (portfolioOffset, aboutOffset, contactOffset);
+        var wH = $(window).scrollTop();
+        
+        
         if ($(window).scrollTop() < portfolioOffset) {
             // if we're not yet at the height of portfolio
             $('.navbar-nav > *').removeClass('active');
@@ -87,7 +73,6 @@ $(document).ready(function (event) {
     
     // -----------------------------------
     // contact form
-$(document).ready(function (event) {
     $('#contactButton').on('click', function (e) {
         $userEmail = $('#email').val(); // retrieve value for email
         $userMsg = $('#message').val(); // retrieve value for msg
@@ -153,6 +138,4 @@ $(document).ready(function (event) {
             $('.contactMessage').html($msg);    
         };
     });
-});
-    
 });
