@@ -546,21 +546,28 @@
                     <a href="https://www.linkedin.com/in/liviabottoni/" title="LinkedIn"><img class="soc-icons" src="./assets/icons/linkedin.svg" alt="LinkedIn icon"></a>
                 </div>
 
-                <div class="col-md-5 contact-form" id="js-contactForm">
-                    <div class="form-group col-md-10">
+                <div class="col-md-5 contact-form pull-right" id="js-contactForm">
+                    <div class="form-group col-md-10 col-md-offset-2">
                         <label for="email" class="sr-only">E-mail (required)</label>
                         <input type="text" name="email" id="email" placeholder="Your e-mail (required)" class="form-group">
                     </div>
-                    <div class="form-group col-md-10">
+                    <div class="form-group col-md-10 col-md-offset-2">
                         <label for="message" class="sr-only">Message (required)</label>
                         <textarea name="message" id="message" cols="30" rows="10" max-length="280" placeholder="Your message (required)" class="form-group"></textarea>
                     </div>
-                    <div class="form-group col-md-10">
+                    <div class="form-group col-md-10 col-md-offset-2">
                         <button id="contactButton" class="contactButton">       <span class="glyphicon glyphicon-envelope"></span>
                             Get in touch
                         </button>
                     </div>
-                    <div class="form-group col-md-8 contactMessage">
+                    
+                    <div class="form-group col-md-10 col-md-offset-2 forTest" hidden>
+                        <label for="forTest" class="sr-only forTest" hidden>Leave this field empty</label>
+                        <input name="forTest" id="forTest" type="text" class="forTest" hidden>
+                    </div>
+                    
+                    <div class="form-group col-md-10 col-md-offset-2 extraInfo">
+                        <p>Your information will not be saved or shared with any third parties.</p>
                         <p class="contactMessage"></p>
                     </div>
                 </div>

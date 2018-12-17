@@ -47,7 +47,7 @@ $(document).ready(function (event) {
         var aboutOffset = $('#about').offset().top;
         aboutOffset = aboutOffset - 150;
         var contactOffset = $('#contact').offset().top;
-        contactOffset = contactOffset - 200;        
+        contactOffset = contactOffset - 150;        
         
         if ($(window).scrollTop() < portfolioOffset) {
             // if we're not yet at the height of portfolio
@@ -69,13 +69,22 @@ $(document).ready(function (event) {
     
     // -----------------------------------
     // contact form
+    // from the get-go, remove the form fields for testing from the page
+    $('.forTest').empty();
+    $testValue = $('#forTest').val(); // check whether there's a value
+    // if there is... 
+    if ($testValue != undefined) {
+//            console.log ('test');
+            $formIsValid = false;
+        }
+    
     $('#contactButton').on('click', function (e) {
         $userEmail = $('#email').val(); // retrieve value for email
         $userMsg = $('#message').val(); // retrieve value for msg
 
         $formIsValid = true; // assume that form is valid
         $msg = ''; // message variable that will contain error/success messages for user
-        
+
         // email can't be blank, must contain @, must contain .
         if ($userEmail != '' && $userEmail.indexOf('@') > 0 && $userEmail.indexOf('.') > 0) {
             $('#email').removeClass('error');
@@ -116,10 +125,7 @@ $(document).ready(function (event) {
                 },
                 success: function (data) {
                     // check whether it returns OK (and not error 1, 2 or 3)
-                    var result = JSON.stringify(data);
-                    console.log (data);
-                    console.log (result);
-                    if (result == "OK") {
+                    if (data.result == "OK") {
                         $msg = 'Success! Your message has been sent.';
                         $('.contactMessage').html($msg);
                     } else {

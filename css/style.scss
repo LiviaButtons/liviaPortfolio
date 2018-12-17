@@ -431,11 +431,7 @@ h2 {
 /* ---------------------- Footer --------------------- */
 footer {
     background-color: $main-teal;
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: center;
-//    align-items: center;
-    
+
     ::-moz-selection { /* Code for Firefox */
         color: $main-teal;
         background: #FFF;
@@ -459,18 +455,24 @@ footer {
 
     .social-buttons {
         margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         
         img {
             width: 50px;
             height: 50px;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin: 10px 0px 10px 0px;
             border: 1px solid #FFF;
             border-radius: 50px;
         }
     }
     
     .contact-form {
+        .form-group {
+            margin-bottom: 5px;
+        }
+        
         input,
         textarea,
         button {
@@ -499,14 +501,22 @@ footer {
             margin-right: 15px;
         }
         
-        .contactMessage {
+        .extraInfo {
+            padding: 12px;
             text-align: center;
             color: #FFF;
-            height: 50px;
+            
+            p {
+                height: 50px;
+            }
         }
         
         .error {
             border: 1px solid #FF0000;
+        }
+        
+        .forTest {
+            display: none;
         }
     }
     
