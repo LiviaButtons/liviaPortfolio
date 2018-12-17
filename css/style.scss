@@ -147,7 +147,6 @@ h2 {
                 width: 60px;
                 height: 45px;
                 position: relative;
-//                margin: 50px auto;
                 -webkit-transform: rotate(0deg);
                 -moz-transform: rotate(0deg);
                 -o-transform: rotate(0deg);
@@ -283,7 +282,18 @@ h2 {
                 height: 250px;
                 margin: 15px 0px 15px 0px;
                 box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
+                opacity: 0.5;
+                filter: alpha(opacity=50); /* IE */ 
+//                transition: .5s ease;
             }
+            
+//            .portfolio-item:hover {
+//                opacity: 0.3;
+//                
+//                span {
+//                    opacity: 1;
+//                }
+//            }
             
             .portfolio-first {
                 background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
@@ -312,6 +322,23 @@ h2 {
                 background-position: center;
                 background-size: contain;
             }
+            
+            span {
+                padding: 25px 10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 50px;
+                z-index: 10;
+                color: #000;
+//                transition: .5s ease;
+                opacity: 1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%)
+            }
         }
         
         img {
@@ -325,6 +352,7 @@ h2 {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            text-align: center;
         }
         
         .demo-img {
@@ -479,5 +507,31 @@ footer {
         margin: 15px;
         color: #FFF;
         font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .portfolio-section {
+        .port-box {  
+            .portfolio-item {
+                opacity: 1 !important;
+                transition: .5s ease;
+
+                span {
+                    transition: .5s ease; 
+                    opacity: 0 !important;
+                }
+            }
+
+            .portfolio-item:hover {
+                opacity: 0.3 !important;
+                cursor: pointer;
+
+                span {
+                    opacity: 1 !important;
+                    color: #000 !important;
+                }
+            }
+        }
     }
 }
