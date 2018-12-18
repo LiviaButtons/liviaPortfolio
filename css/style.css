@@ -348,14 +348,14 @@ footer {
     text-align: center;
     color: #FFF; }
     footer .contact-form .extraInfo p {
-      height: 50px; }
+      height: 40px; }
   footer .contact-form .error {
     border: 1px solid #FF0000; }
   footer .contact-form .forTest {
     display: none; }
   footer p {
     text-align: center;
-    margin: 15px;
+    margin-top: 10px;
     color: #FFF;
     font-size: 12px; }
 
