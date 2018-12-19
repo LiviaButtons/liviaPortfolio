@@ -458,13 +458,13 @@ footer {
     .social-buttons {
         margin: 20px;
         display: flex;
-        flex-direction: column;
+//        flex-direction: column;
         justify-content: center;
         
         img {
             width: 50px;
             height: 50px;
-            margin: 10px 0px 10px 0px;
+            margin: 10px;
             border: 1px solid #FFF;
             border-radius: 50px;
         }
@@ -561,6 +561,12 @@ footer {
                     color: #000 !important;
                 }
             }
+        }
+    }
+    
+    footer {
+        .social-buttons {
+            justify-content: flex-start;
         }
     }
 }
