@@ -10,15 +10,15 @@
   font-family: LatoBold;
   src: url(../assets/fonts/Lato-Bold.ttf); }
 /* declaring font variables */
-* {
-  box-sizing: border-box;
-  border-collapse: collapse; }
-
 /* --------------------------------------------------- */
 /* --------------------- General --------------------- */
 html {
   overflow-y: scroll;
   scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+  border-collapse: collapse; }
 
 html * {
   font-family: "Lato", sans-serif;
@@ -41,11 +41,7 @@ footer {
   padding-bottom: 40px;
   margin: 0; }
 
-::-moz-selection {
-  /* Code for Firefox */
-  color: #FFF;
-  background: #2d909c; }
-
+::-moz-selection,
 ::selection {
   color: #FFF;
   background: #2d909c; }
@@ -77,11 +73,15 @@ h2 {
     width: 100%;
     z-index: -1; }
   h2 span {
-    /* to hide the lines from behind the text, set the background color the same as the container */
+    /* to hide the lines from behind the text, same bgc as the container */
     font-family: "LatoBold", sans-serif;
     color: #2d909c;
     background: #fff;
     padding: 0 15px; }
+
+textarea:focus,
+input:focus {
+  outline: #2d535b; }
 
 /* --------------------------------------------------- */
 /* --------------------- header ---------------------- */
@@ -305,10 +305,7 @@ h2 {
 /* ---------------------- Footer --------------------- */
 footer {
   background-color: #2d909c; }
-  footer ::-moz-selection {
-    /* Code for Firefox */
-    color: #2d909c;
-    background: #FFF; }
+  footer ::-moz-selection,
   footer ::selection {
     color: #2d909c;
     background: #FFF; }
@@ -360,6 +357,9 @@ footer {
 @media only screen and (min-width: 768px) {
   #nav li:hover {
     background-color: #2d535b; }
+
+  .header-img {
+    height: 500px; }
 
   .portfolio-section .port-box .portfolio-item {
     opacity: 1 !important;

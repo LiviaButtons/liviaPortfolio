@@ -24,16 +24,17 @@ $light-grey: #f4f2f2;
 $heading-font: 'LatoBold', sans-serif;
 $text-font: 'Lato', sans-serif;
 
-* {
-    box-sizing: border-box;
-    border-collapse: collapse;
-}
 
 /* --------------------------------------------------- */
 /* --------------------- General --------------------- */
 html {
     overflow-y: scroll;
     scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    border-collapse: collapse;
 }
 
 html * {
@@ -62,23 +63,14 @@ footer {
     margin: 0;
 }
 
-::-moz-selection { /* Code for Firefox */
-    color: #FFF;
-    background: $main-teal;
-}
-
-::selection {
+::-moz-selection, // Firefox
+::selection { // AKA highlighted text
     color: #FFF;
     background: $main-teal;
 }
 
 header {
     padding-top: 0;
-}
-
-main {
-//    padding-top: 80px;
-//    margin-top: 80px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -104,12 +96,17 @@ h2 {
     }
 
     span { 
-        /* to hide the lines from behind the text, set the background color the same as the container */ 
+        /* to hide the lines from behind the text, same bgc as the container */ 
         font-family: $heading-font;
         color: $main-teal;
         background: #fff; 
         padding: 0 15px; 
     }
+}
+
+textarea:focus, 
+input:focus, {
+    outline: $dark-teal;
 }
 
 
@@ -447,11 +444,7 @@ h2 {
 footer {
     background-color: $main-teal;
 
-    ::-moz-selection { /* Code for Firefox */
-        color: $main-teal;
-        background: #FFF;
-    }
-
+    ::-moz-selection, 
     ::selection {
         color: $main-teal;
         background: #FFF;
@@ -461,6 +454,7 @@ footer {
         &:before {
             border-top: 2px solid #FFF;
         }
+        
         span { 
             color: #FFF;
             background: $main-teal; 
@@ -534,6 +528,10 @@ footer {
         li:hover {
             background-color: $dark-teal;
         }
+    }
+    
+    .header-img {
+        height: 500px;
     }
     
     
