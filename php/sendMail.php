@@ -13,7 +13,7 @@ if (isset ($_POST['email'], $_POST['message']) && strlen($_POST['message']) <= 2
         // remove unnecessary spaces and any HTML tags
         $message = trim(strip_tags($_POST['message']));
         // define recipient
-        $recipient = 'livia.bottoni@gmail.com';
+        $recipient = 'contact@liviabottoni.eu';
         // and standard subject
         $subject = 'liviabottoni.eu - new message from contact form';
         // add recipient info and message in the body of the mail

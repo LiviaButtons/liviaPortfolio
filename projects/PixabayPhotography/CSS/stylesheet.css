@@ -2,7 +2,12 @@ html {
     height: 100%;
     width: 100%;
     font-family: 'Open Sans', sans-serif; 
+    line-height: 1.5em;
+}
 
+html > * {
+    box-sizing: border-box;
+    border-collapse: collapse;
 }
 
 
@@ -159,8 +164,6 @@ html {
 /* -------------------------------------------*/ 
 /* Formatting the general html content */
 
-
-
 header {
     background-color: #232323;
 }
@@ -212,7 +215,7 @@ h5 {
 }
 
 h6 {
-    font-size: 800%;
+    font-size: 80%;
 }
 
 main {
@@ -470,6 +473,7 @@ input[type="email"],
     margin: 5px;
     padding: 0 4px;
     background-color: #555555;
+    border: none;
     color: white;
 }
 
@@ -517,7 +521,7 @@ address a:hover {
 }
 
 /* -------------------------------------------*/
-/*Let's format the footer */
+/* Let's format the footer */
 
 /* This adds a margin at the bottom of the main container to the footer */
 main {
@@ -573,6 +577,16 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+footer input[type="text"],
+footer input[type="email"] {
+    width: 90%;
+    padding: 5px;
+}
+
+footer button {
+    padding: 15px 25px;
 }
 
 #copyright {
