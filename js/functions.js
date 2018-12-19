@@ -87,7 +87,6 @@ $(document).ready(function (event) {
 
         // email can't be blank, must contain @, must contain .
         if ($userEmail != '' && $userEmail.indexOf('@') > 0 && $userEmail.indexOf('.') > 0) {
-            $('#email').removeClass('error');
             $('#email').attr('placeholder', 'Your e-mail (required)');
         } else {
             // if conditions aren't met, shake and change placeholder
@@ -127,6 +126,7 @@ $(document).ready(function (event) {
                     if (data.result == "OK") {
                         $msg = 'Success! Your message has been sent.';
                         $('.contactMessage').html($msg);
+                        $('.contactMessage').css('opacity', 1);           
                     } else {
                         $msg = 'There was a technical issue.';
                         $('.contactMessage').html($msg);

@@ -52,7 +52,7 @@ $(document).ready(function (event) {
                 success: function (data) {
 //                    console.log (data)
                     // perhaps check condition that it returns result: OK
-                    $msg = 'Sucés ! Votre message a été envoyé. '
+                    $msg = 'Succès ! Votre message a été envoyé. '
                     $('.contactMessage').html($msg);
                 }, 
                 error: function (xhr, status, errorMsg) {

@@ -3,7 +3,7 @@
     header ('Content-Type: application/json'); // expect & generate JSON
 
     // use the config file
-    require_once('./config/config.php');
+    require_once('../../../../config/config.php');
     
     // Create connection to the database
     try {

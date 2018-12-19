@@ -1,5 +1,0 @@
-Create user in phpMyAdmin
-name: weeklyUser
-pwd: 12345
-hostname: localhost
-permissions: select
