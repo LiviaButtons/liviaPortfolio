@@ -78,7 +78,7 @@ header {
 
 main {
 //    padding-top: 80px;
-    margin-top: 80px;
+//    margin-top: 80px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -116,7 +116,7 @@ h2 {
 /* --------------------------------------------------- */
 /* --------------------- header ---------------------- */
 .header-img {
-    min-height: 500px;
+    height: 250px;
     background-image: url(../assets/img/header-img.svg);
     background-position: center;
     background-size: contain;
@@ -387,47 +387,60 @@ h2 {
 
 /* --------------------------------------------------- */
 /* ----------------------- About --------------------- */
+#about {
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: space-between;
+//    align-items: center;
 
-.about-box {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    min-height: 350px;
-    box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
-    padding: 30px;
-    
-    div {
+
+    .about-row {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        
-        img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-            border: 1px solid $main-teal;
-            border-radius: 50px;
-        }
-    }
-    
-    .find-me {
-        padding-top: 20px;
-    }
-    
-    ul {
-        padding: 0;
-        margin-left: 0;
-        list-style: none;
-        
-        li > span {
-            color: $main-teal;
-            padding-right: 10px;
-            display: inline;
+
+
+        .about-box {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            min-height: 350px;
+            box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
+            padding: 30px;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 10px;
+                    border: 1px solid $main-teal;
+                    border-radius: 50px;
+                }
+            }
+
+            .find-me {
+                padding-top: 20px;
+            }
+
+            ul {
+                padding: 0;
+                margin-left: 0;
+                list-style: none;
+
+                li > span {
+                    color: $main-teal;
+                    padding-right: 10px;
+                    display: inline;
+                }
+            }
         }
     }
 }
-
-
 
 /* --------------------------------------------------- */
 /* ---------------------- Footer --------------------- */
@@ -452,21 +465,6 @@ footer {
             color: #FFF;
             background: $main-teal; 
             padding: 0 15px; 
-        }
-    }
-
-    .social-buttons {
-        margin: 20px;
-        display: flex;
-//        flex-direction: column;
-        justify-content: center;
-        
-        img {
-            width: 50px;
-            height: 50px;
-            margin: 10px;
-            border: 1px solid #FFF;
-            border-radius: 50px;
         }
     }
     
@@ -513,18 +511,17 @@ footer {
             }
         }
         
-        .error {
-            border: 1px solid #FF0000;
-        }
-        
         .forTest {
             display: none;
+        }
+        
+        .contactMessage {
+            opacity: 0;
+            transition: opacity 1s linear;
         }
     }
     
     p {
-//        padding-top: 15px;
-//        border-top: 1px solid #FFF;
         text-align: center;
         margin-top: 10px;
         color: #FFF;
@@ -564,9 +561,7 @@ footer {
         }
     }
     
-    footer {
-        .social-buttons {
-            justify-content: flex-start;
-        }
+    #about .about-row {
+        flex-direction: row;
     }
 }

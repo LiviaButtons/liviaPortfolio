@@ -53,9 +53,6 @@ footer {
 header {
   padding-top: 0; }
 
-main {
-  margin-top: 80px; }
-
 h1, h2, h3, h4, h5, h6 {
   font-family: "LatoBold", sans-serif;
   color: #2d909c; }
@@ -89,7 +86,7 @@ h2 {
 /* --------------------------------------------------- */
 /* --------------------- header ---------------------- */
 .header-img {
-  min-height: 500px;
+  height: 250px;
   background-image: url(../assets/img/header-img.svg);
   background-position: center;
   background-size: contain;
@@ -271,33 +268,38 @@ h2 {
 
 /* --------------------------------------------------- */
 /* ----------------------- About --------------------- */
-.about-box {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  min-height: 350px;
-  box-shadow: #d6d6d6 0px 0px 15px 3px, #d6d6d6 0px 0px 15px 3px;
-  padding: 30px; }
-  .about-box div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-    .about-box div img {
-      width: 50px;
-      height: 50px;
-      margin-right: 10px;
-      border: 1px solid #2d909c;
-      border-radius: 50px; }
-  .about-box .find-me {
-    padding-top: 20px; }
-  .about-box ul {
-    padding: 0;
-    margin-left: 0;
-    list-style: none; }
-    .about-box ul li > span {
-      color: #2d909c;
-      padding-right: 10px;
-      display: inline; }
+#about .about-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  #about .about-row .about-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 350px;
+    box-shadow: #d6d6d6 0px 0px 15px 3px, #d6d6d6 0px 0px 15px 3px;
+    padding: 30px; }
+    #about .about-row .about-box div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      #about .about-row .about-box div img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border: 1px solid #2d909c;
+        border-radius: 50px; }
+    #about .about-row .about-box .find-me {
+      padding-top: 20px; }
+    #about .about-row .about-box ul {
+      padding: 0;
+      margin-left: 0;
+      list-style: none; }
+      #about .about-row .about-box ul li > span {
+        color: #2d909c;
+        padding-right: 10px;
+        display: inline; }
 
 /* --------------------------------------------------- */
 /* ---------------------- Footer --------------------- */
@@ -316,16 +318,6 @@ footer {
     color: #FFF;
     background: #2d909c;
     padding: 0 15px; }
-  footer .social-buttons {
-    margin: 20px;
-    display: flex;
-    justify-content: center; }
-    footer .social-buttons img {
-      width: 50px;
-      height: 50px;
-      margin: 10px;
-      border: 1px solid #FFF;
-      border-radius: 50px; }
   footer .contact-form .form-group {
     margin-bottom: 5px; }
   footer .contact-form input,
@@ -354,10 +346,11 @@ footer {
     color: #FFF; }
     footer .contact-form .extraInfo p {
       height: 40px; }
-  footer .contact-form .error {
-    border: 1px solid #FF0000; }
   footer .contact-form .forTest {
     display: none; }
+  footer .contact-form .contactMessage {
+    opacity: 0;
+    transition: opacity 1s linear; }
   footer p {
     text-align: center;
     margin-top: 10px;
@@ -381,7 +374,7 @@ footer {
       opacity: 1 !important;
       color: #000 !important; }
 
-  footer .social-buttons {
-    justify-content: flex-start; } }
+  #about .about-row {
+    flex-direction: row; } }
 
 /*# sourceMappingURL=style.css.map */

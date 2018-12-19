@@ -90,8 +90,8 @@ $(document).ready(function (event) {
             $('#email').removeClass('error');
             $('#email').attr('placeholder', 'Your e-mail (required)');
         } else {
-            // if conditions aren't met, add error class and change placeholder
-            $('#email').addClass('error');
+            // if conditions aren't met, shake and change placeholder
+            $('#email').effect('shake');
             $('#email').attr('placeholder', 'Error!');
             // tell form isn't valid
             $formIsValid = false;
@@ -101,11 +101,10 @@ $(document).ready(function (event) {
         
         // message can't be blank
         if ($userMsg != '') {
-            $('#message').removeClass('error');
             $('#message').attr('placeholder', 'Your message (required)');
         } else {
-            // if condition isn't met, add error class and change placeholder
-            $('#message').addClass('error');
+            // if condition isn't met, shake and change placeholder
+            $('#message').effect('shake');
             $('#message').attr('placeholder', 'Error!');
             // tell form isn't valid
             $formIsValid = false;
@@ -131,18 +130,21 @@ $(document).ready(function (event) {
                     } else {
                         $msg = 'There was a technical issue.';
                         $('.contactMessage').html($msg);
+                        $('.contactMessage').css('opacity', 1)
                     }
                 }, 
                 error: function (xhr, status, errorMsg) {
 //                    console.log ('Status: ' + status);
 //                    console.log ('Error: ' + errorMsg);
                     $('.contactMessage').html('Technical issue.');
+                    $('.contactMessage').css('opacity', 1)
                 },
                 complete: function (xhr, status) {
                 }
             });
         } else {
-            $('.contactMessage').html($msg);    
+            $('.contactMessage').html($msg);  
+            $('.contactMessage').css('opacity', 1);
         };
     });
     
