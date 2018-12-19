@@ -145,4 +145,5 @@ $(document).ready(function (event) {
             $('.contactMessage').html($msg);    
         };
     });
+    
 });

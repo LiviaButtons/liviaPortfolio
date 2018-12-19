@@ -203,6 +203,20 @@ h2 {
   opacity: 0.5;
   filter: alpha(opacity=50);
   /* IE */ }
+  #portfolio .portfolio-section .port-box .portfolio-item span {
+    padding: 25px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    z-index: 10;
+    color: #000;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); }
 #portfolio .portfolio-section .port-box .portfolio-two {
   background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
   background-repeat: no-repeat;
@@ -233,25 +247,17 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; }
-#portfolio .portfolio-section .port-box span {
-  padding: 25px 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 50px;
-  z-index: 10;
-  color: #000;
-  opacity: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); }
 #portfolio .portfolio-section img {
   max-width: 100%;
   max-height: 100%; }
-#portfolio .portfolio-section .close {
-  display: none; }
+#portfolio .portfolio-section .modal-header {
+  height: 60px; }
+  #portfolio .portfolio-section .modal-header .close {
+    position: relative;
+    top: -35px;
+    right: 10px;
+    padding: 0;
+    margin: 0; }
 #portfolio .portfolio-section .demo-img {
   padding: 0; }
 #portfolio .portfolio-section .demo-buttons {
