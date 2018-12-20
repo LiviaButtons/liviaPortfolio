@@ -129,9 +129,14 @@ $(document).ready(function (event) {
                 success: function (data) {
                     // check whether it returns OK (and not error 1, 2 or 3)
                     if (data.result == "OK") {
+                        // add success message
                         $msg = 'Success! Your message has been sent.';
                         $('.contactMessage').html($msg);
-                        $('.contactMessage').css('opacity', 1);           
+                        $('.contactMessage').css('opacity', 1); 
+                        
+                        // clear values
+                        $('#email').val('');
+                        $('#message').val('');
                     } else {
                         $msg = 'There was a technical issue.';
                         $('.contactMessage').html($msg);
