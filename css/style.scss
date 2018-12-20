@@ -526,7 +526,20 @@ footer {
         height: 500px;
     }
     
-    .portfolio-section {
+    #portfolio {
+        #portfolio-buttons {
+            transition: color 1s linear;
+            transition: background-color 1s linear;
+            
+            .port-button:hover {
+                color: #FFF;
+                background-color: $main-teal;
+                border: 1px solid #FFF;
+            }
+        }
+    }
+    
+    .portfolio-section { 
         .port-box {  
             .portfolio-item {
                 opacity: 1 !important;
@@ -552,5 +565,18 @@ footer {
     
     #about .about-row {
         flex-direction: row;
+    }
+    
+    footer {
+        #contactButton:hover {
+            color: $main-teal;
+            background-color: #fff;
+            transition: color 1s linear;
+            transition: background-color 1s linear;
+            
+            span {
+                color: $main-teal;
+            }
+        }
     }
 }

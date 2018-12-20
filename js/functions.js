@@ -22,6 +22,9 @@ $(document).ready(function (event) {
     // Function to show/hide portfolio sections
     $('.port-button').on('click', function (e) {
         $clicked = e.target;
+        // remove active class from all buttons
+        $('.port-button').removeClass('active');
+        $($clicked).addClass('active');
         
         if ($($clicked).attr('id') == 'web') {
             // hide everything, show web
@@ -71,12 +74,6 @@ $(document).ready(function (event) {
     // contact form
     // from the get-go, remove the form fields for testing from the page
     $('.forTest').empty();
-    $testValue = $('#forTest').val(); // check whether there's a value
-    // if there is... 
-    if ($testValue != undefined) {
-//            console.log ('test');
-            $formIsValid = false;
-        }
     
     $('#contactButton').on('click', function (e) {
         $userEmail = $('#email').val(); // retrieve value for email
@@ -91,7 +88,7 @@ $(document).ready(function (event) {
         } else {
             // if conditions aren't met, shake and change placeholder
             $('#email').effect('shake');
-            $('#email').attr('placeholder', 'Error!');
+            $('#email').attr('placeholder', 'Error! Invalid e-mail');
             // tell form isn't valid
             $formIsValid = false;
             // create error message 
@@ -104,12 +101,20 @@ $(document).ready(function (event) {
         } else {
             // if condition isn't met, shake and change placeholder
             $('#message').effect('shake');
-            $('#message').attr('placeholder', 'Error!');
+            $('#message').attr('placeholder', 'Error! Empty message');
             // tell form isn't valid
             $formIsValid = false;
             // create error message
             $msg = $msg + 'Your message cannot be empty. ';
         }
+        
+        // check whether a value for the test form-field was received
+        $testValue = $('#forTest').val(); 
+        // if there is... 
+        if ($testValue != undefined) {
+    //            console.log ('test');
+                $formIsValid = false;
+            }
         
         // if basic validation succeeds, launch Ajax call
         if ($formIsValid) {

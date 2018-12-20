@@ -361,6 +361,14 @@ footer {
   .header-img {
     height: 500px; }
 
+  #portfolio #portfolio-buttons {
+    transition: color 1s linear;
+    transition: background-color 1s linear; }
+    #portfolio #portfolio-buttons .port-button:hover {
+      color: #FFF;
+      background-color: #2d909c;
+      border: 1px solid #FFF; }
+
   .portfolio-section .port-box .portfolio-item {
     opacity: 1 !important;
     transition: .5s ease; }
@@ -375,6 +383,14 @@ footer {
       color: #000 !important; }
 
   #about .about-row {
-    flex-direction: row; } }
+    flex-direction: row; }
+
+  footer #contactButton:hover {
+    color: #2d909c;
+    background-color: #fff;
+    transition: color 1s linear;
+    transition: background-color 1s linear; }
+    footer #contactButton:hover span {
+      color: #2d909c; } }
 
 /*# sourceMappingURL=style.css.map */
