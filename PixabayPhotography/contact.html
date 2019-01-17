@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Pixabay Photography</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/stylesheet.css">
+        <link rel="stylesheet" href="./css/calendarview.css">
+        
+        
+        
+        <script src="./js/form.js"></script>      
+        <script src="./js/calendarview.js"></script>
+        <script src="./js/prototype.js"></script>
+        <script>
+            window.onload = function() {
+                Calendar.setup({
+                  dateField      : 'date',
+                  triggerElement : 'calendarButton'
+                })
+            }
+        </script>  
+        
+        
+        
+    </head>
+    
+    <body>
+        <header>
+            <div class="logoHeader">
+                <img src="./images/logos/standard-logo.png" alt="Pixabay Photography Logo">
+            </div>
+        </header>
+        
+        <div class="mainNav">
+            <ul>
+                <li><a href="./index.html" target="_self" id="home">HOME</a></li>
+                <li><a href="./about.html" target="_self">ABOUT</a></li>
+                <li><a href="./portrait.html" target="_self">PORTRAITS</a></li>
+                <li><a href="./dogs.html" target="_self">DOGS</a></li>
+                <li><a href="./cats.html" target="_self">CATS</a></li>
+                <li><a href="./prices.html" target="_self">PRICES</a></li>
+                <li><a class="active" href="./contact.html" target="_self">CONTACT</a></li>
+            </ul>
+        </div>
+           
+        <main>
+            <h1>Get in touch</h1>
+            <div id="bookingContact">
+                <div id="form">
+                    <h3>Book a photoshoot</h3>
+                    <form action="http://www.bbug.be/freelance/i3/output.php" method="post">
+                        <label for="firstname" class="regLabel">First name</label>
+                        <input id="firstname" type="text" placeholder="John">
+                        <br/>
+
+                        <label for="lastname" class="regLabel">Last name</label>
+                        <input id="lastname" type="text" placeholder="Smith">
+                        <br/>
+
+                        <label for="email" class="regLabel">E-mail address</label>
+                        <input id="email" type="email" placeholder="example@email.com">
+                        <br/>
+
+                        <label for="shoottype" class="regLabel">Choose a package</label>
+                        <select id="shoottype" name="shoottype">
+                           <option value="s1">Premium package (portrait)</option>
+                           <option value="s2">Standard package (portrait)</option>
+                           <option value="s3" class="petSelect">Premium outdoors package (pets)</option>
+                           <option value="s4" class="petSelect">Premium studio package (pets)</option>
+                           <option value="s5" class="petSelect">Standard outdoors package (pets)</option>
+                           <option value="s6" class="petSelect">Standard studio studio (pets)</option>
+                        </select>
+                        <br/>
+
+                        <label for="pets" class="labelPets pets" id="petKind">Which kind of pet do you have?</label>
+                        <input type="radio" class="pets" name="pets" value="dog(s)" checked><label class="pets" for="pets">Dog(s)</label>
+                        <input type="radio"  class="pets" name="pets" value="cat(s)"><label class="pets" for="pets">Cat(s)</label>
+                        <input type="radio"  class="pets" name="pets" value="other"><label class="pets" for="pets">Other</label>
+                        <br/>
+
+                        <label for="date" class="regLabel">Desired date for photoshoot</label>
+                        <input id="date" type="text" name="date" placeholder="01-01-2018"/>
+                        <input type="button" id="calendarButton" class="buttonLink" value="Choose a date" />
+                        <br/>
+
+                        <label for="extraInfo" class="regLabel">Comments and additional information</label>
+                        <br/>
+                        <textarea id ="extraInfo" maxlength="500" placeholder="Type any additional information here."></textarea>
+                        <br/>
+
+                        <button id="submit">Submit</button>
+                    </form>
+                </div>
+             
+                <div id="contact">
+                    <h3>Contact us</h3>
+                    <p>
+                        For questions, information and any queries before booking, don't hesitate to get in touch! You can call or email us to get more information about the packages and available time-slots. 
+                    </p>
+                    <address>
+                        <strong>Pixabay Photography</strong><br/>
+                        Grand Place 1<br/>
+                        1000 Brussels<br/>
+                        Belgium<br/>
+                        <a hfref="mailto:info@pixabayphotograhy.com">info@pixabayphotography.com</a><br/>
+                        +32 (0)234 56 78
+                    </address>
+                </div>
+               
+            </div> 
+           
+            <h3>Our Studio</h3>
+            <div id="map">
+                <script>
+                    function initMap() {
+                    var brussels = {lat: 50.846551, lng: 4.351733};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 15,
+                      center: brussels
+                    });
+                    var marker = new google.maps.Marker({
+                      position: brussels,
+                      map: map
+                    });
+                  }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr1Q3p40kkMR2DZpmFSOc339akvDW3eQE&callback=initMap">
+                </script>
+            </div>
+            
+        </main>
+
+        <footer>
+            <div class="footerIcons">
+                <a href="https://www.facebook.com" target="_blank"><img src="./images/icons/facebook-icon-small.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="./images/icons/icon-instagram-small.png" alt="Instagram"></a>
+                <a href = "http://flickr.com" target="_blank"><img src="./images/icons/icon-flickr-small.png" alt="Flickr"></a>
+            </div>
+            
+            <div class="footerBoxes">
+                <div class="bottomBox">
+                    <h3>Sitemap</h3>
+                    <a href="./index.html" target="_self">HOME</a><br/>
+                    <a href="./about.html" target="_self">ABOUT</a><br/>
+                    <a href="./portrait.html" target="_self">PORTRAITS</a><br/>
+                    <a href="./dogs.html" target="_self">DOGS</a><br/>
+                    <a href="./cats.html" target="_self">CATS</a><br/>
+                    <a href="./prices.html" target="_self">PRICES</a><br/>
+                    <a href="./contact.html" target="_self">CONTACT</a>
+                </div>
+
+                <div class="bottomBox">
+                    <h3>Contact</h3>
+                    <address>
+                        Grand Place 1<br/>
+                        1000 Brussels<br/>
+                        Belgium<br/>
+                        <a href="mailto:info@pixabayphotography.com">info@pixabayphotography.com</a><br/>
+                        +32 (0)234 56 78
+                    </address>
+                    <br/>
+                    <a class="buttonLink" href="./contact.html" target="_self">Book a shooting</a>
+                </div>
+
+                <div class="bottomBox">
+                    <h3>Sign up to our mailing list</h3>
+                    <input id="newsletterFname" name="newsletterFname" type="text" placeholder="First name">
+                    <br/>
+                    <input id="newsletterLname" name="newsletterLname" type="text" placeholder="Last name">
+                    <br/>
+                    <input id="newsletterEmail" name="newsletterEmail" type="text" placeholder="E-mail address">
+                    <br/>
+                    <button id="newsletterButton">Sign up</button>
+                </div>
+            </div>
+            
+            <br/>
+            <p id="copyright">&copy; Pixabay Photography. All rights reserved.</p>
+        </footer>    
+        
+        
+        <script src="./JS/calendarview.js"></script>
+        <script src="./JS/prototype.js"></script>
+        <script>
+            window.onload = function() {
+                Calendar.setup({
+                  dateField      : 'date',
+                  triggerElement : 'calendarButton'
+                })
+            }
+        </script>  
+            
+    </body>    
+</html>

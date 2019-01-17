@@ -2,7 +2,11 @@
 // Author: Livia Bottoni
 
 $(document).ready(function (event) {
-
+// -------------------------
+// initialise AOS scroll fade-in
+    AOS.init();
+    
+    
 // -------------------------
 // Function for hamburger menu and animation
 // animation based on: https://codepen.io/designcouch/pen/Atyop
