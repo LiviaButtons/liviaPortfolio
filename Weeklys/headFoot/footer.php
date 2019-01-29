@@ -24,6 +24,6 @@
                         <p class="contactMessage"></p>
                     </div>
                 </div>
-                <p class="copyright">&copy; Weekly's 2018</p>
+                <p class="copyright">Built by <a href="https://sarraallaoui.be">Sarra Allaoui</a>, <a href="https://liviabottoni.eu">Livia Bottoni</a>, <a href="https://sarahlarosa.be/">Sarah La Rosa</a>. See this project on <a href="https://github.com/LiviaButtons/Weeklys">Github</a></p>
             </div>
 </footer>

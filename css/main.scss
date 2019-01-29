@@ -88,15 +88,15 @@ h2 {
     &:before {
         border-top: 2px solid $main-teal;
         content:"";
-        margin: 0 auto; /* this centers the line to the full width specified */
-        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        margin: 0 auto; // this centers the line to the full width specified 
+        position: absolute; // positioning must be absolute here, and relative positioning must be applied to the parent 
         top: 50%; left: 0; right: 0; bottom: 0;
         width: 100%;
         z-index: -1;
     }
 
     span { 
-        /* to hide the lines from behind the text, same bgc as the container */ 
+        //to hide the lines from behind the text, same bgc as the container
         font-family: $heading-font;
         color: $main-teal;
         background: #fff; 
@@ -110,21 +110,11 @@ input:focus, {
 }
 
 /* button on 404 page */
-    #hp-btn {
-        margin-top: 10px;
-        color: #FFF;
-        background-color: $main-teal;
-        border: none;
-    }
-
-/* --------------------------------------------------- */
-/* --------------------- header ---------------------- */
-.header-img {
-    height: 250px;
-    background-image: url(../assets/img/header-img.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#hp-btn {
+    margin-top: 10px;
+    color: #FFF;
+    background-color: $main-teal;
+    border: none;
 }
 
 
@@ -144,13 +134,44 @@ input:focus, {
             border: none;
         }
         
-        // animation of the hamburger menu
+        /* animation of the logo */
         .navbar-header {
+            position: relative;
+            
             .navbar-brand {
-                font-family: LatoBold;
-                text-transform: uppercase;
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                border: 2px solid #FFF;
+                padding: 5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                transform: rotate(0deg);
+                transition: transform 0.5s linear;
+                
+                .logo-text {
+                    font-family: LatoBold;
+                    text-transform: uppercase;
+                    color: #FFF;
+                    transform: rotate(0deg);
+                    transition: transform 0.5s linear;
+                }
             }
             
+            .navbar-brand:hover {
+                transform: rotate(45deg);
+                
+                .logo-text {
+                    transform: rotate(-45deg);
+                }
+            }
+            
+            /* animation of the hamburger menu */
             #hamMenu {
                 border: none;
                 width: 30px;
@@ -258,6 +279,50 @@ input:focus, {
     }
 }
 
+
+/* --------------------------------------------------- */
+/* ---------------------- Header --------------------- */
+.header-img {
+    height: 200px;
+    background-image: url(../assets/img/header-img.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* bouncing element for scroll */
+.scroll-down {
+    text-align: center;
+    height: 40px;
+    margin-top: 20px;
+    transform: rotate(90deg);
+    
+    span {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+//        left: calc(50% + 20px); // be at the centre, so 50% - half of width
+        left: 50%;
+        color: $main-teal;
+        font-size: 40px;
+        -webkit-animation: 1s bounce infinite;
+        -moz-animation: 1s bounce infinite;
+        -o-animation: 1s bounce infinite;
+        -ms-animation: 1s bounce infinite;
+        animation: 1s bounce infinite;
+    }
+    
+    @-webkit-keyframes bounce { 
+        0%, 50%, 100% {-webkit-transform: translateX(0);} 
+        25%, 75% {-webkit-transform: translateX(10px);} 
+    } 
+    
+    @keyframes bounce { 
+        0%, 100% {-webkit-transform: translateX(0);} 
+        50% {-webkit-transform: translateX(10px);} 
+    }
+}
 
 /* --------------------------------------------------- */
 /* -------------------- Portfolio -------------------- */
@@ -548,6 +613,18 @@ footer {
         height: 500px;
     }
     
+    .scroll-down {
+        margin-top: 60px;
+        
+        .glyphicon-chevron-right {
+            transition: color 1s ease;
+        }
+    
+        .glyphicon-chevron-right:hover {
+            color: $dark-teal;
+        }
+    }
+    
     #portfolio {
         #portfolio-buttons {
             .port-button {
@@ -598,8 +675,6 @@ footer {
                         -ms-transform: translate(-50%, -50%);
                         transform: translate(-50%, -50%);
                         text-align: center;
-                        border: 1px solid #FFF;
-                        border-radius: 120px;
                     }
                 }
             }

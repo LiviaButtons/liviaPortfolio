@@ -4,13 +4,19 @@
       xmlns:fb="http://ogp.me/ns/fb#">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Portfolio website of Livia Bottoni, junior front-end developer based in Belgium">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio website of Livia Bottoni, junior front-end developer based in Brussels, Belgium" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Livia Bottoni">
         <meta name="google-site-verification" content="RqwAW_jIIxkOLIfQTHp1aN7NGCv3_4dWg24BiXiD8jY" />
         <meta property="og:title" content="Livia Bottoni - Junior Front-end Developer" />
         <meta property="og:url" content="https://liviabottoni.eu" />
-        <meta property="og:image" content="https://liviabottoni.eu/assets/img/header-img.svg" style="width:500px;height:auto" />
-        <meta property="og:description" content="Portfolio website of Livia Bottoni, junior front-end developer based in Belgium" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://liviabottoni.eu/assets/img/header-img.png" />
+        <meta property="og:image_url" content="https://liviabottoni.eu/assets/img/header-img.png" />
+        <meta property="og:image:secure_url" content="https://liviabottoni.eu/assets/img/header-img.png" />
+        <meta property="og:image:alt" content="Header image showing a laptop, computer screen and smartphone" />        
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:description" content="Portfolio website of Livia Bottoni, junior front-end developer based in Brussels, Belgium" />
         <title>Livia Bottoni | Front-end web developer based in Brussels</title>
         
         <!-- JS -->
@@ -28,6 +34,7 @@
         <!-- favicon -->
         <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
     </head>
+    
     <body id="home" class="container-fluid">
         <header>
             <nav id="nav" class="navbar navbar-default navbar-fixed-top">
@@ -39,7 +46,11 @@
                             <span class="hamMenu-bar"></span>
                             <span class="hamMenu-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Livia Bottoni</a>
+                        <a class="navbar-brand livia-logo" href="#">
+                            <span class="logo-text">
+                                {LB}
+                            </span>
+                        </a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -61,6 +72,12 @@
                 
                 <div class="col-xs-10 col-xs-offset-1 header-img">
                     <!-- header-img added as background in CSS -->
+                </div>
+                
+                <div class="col-xs-10 col-xs-offset-1 scroll-down">
+                    <a href="#portfolio" class="scroll-button">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
                 </div>
             </section>
              
@@ -345,7 +362,7 @@
                                     <div class="modal-body">
                                         <div class="container-fluid">
                                             <div class="col-xs-12 demo-img">
-                                                <img src="./assets/portfolio/pixabayPhotography/pixabay-desktop.png" alt="Robocode level two">
+                                                <img src="./assets/portfolio/pixabayPhotography/pixabay-desktop.png" alt="Homepage of Pixabay">
                                             </div>
                                             <div class="col-md-7">
                                                 <h4>About this project</h4>
@@ -380,6 +397,7 @@
                                             </div>
 
                                             <div class="col-md-5 demo-buttons">
+                                                <a class="btn btn-primary" href="https://github.com/LiviaButtons/PixabayPhotography" alt="link to Github Repository">Github repository</a> 
                                                 <a class="btn btn-primary" href="./PixabayPhotography" alt="link to demo version">See demo</a>
                                             </div>
                                         </div>
@@ -596,7 +614,7 @@
             </div>
 
             <div class="col-xs-10 col-xs-offset-1">
-                <p>&copy; Livia Bottoni, 2018</p>
+                <p>&copy; Livia Bottoni, 2018-2019</p>
             </div>
         </footer>
     </body>

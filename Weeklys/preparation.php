@@ -88,19 +88,14 @@ if (isset($_GET['code'])){
     
     
         <link rel="stylesheet" href="./headFoot/headerFooter.css">
-
         <link rel="stylesheet" href="./css/preparation.css">
         <link rel="stylesheet" href="./css/style_print_recette.css">
         <link rel="stylesheet" href="./headFoot/headerFooter.css">
-    
-    
-    
-    
 </head>
 <body>
     <!--<?php include('./headFoot/header.php')?>-->
     
-   <!--Header-->
+    <!--Header-->
     <header class="nav-down">
         <div> 
             <div class="logo">
@@ -139,21 +134,16 @@ if (isset($_GET['code'])){
         </div>
     </header>
     
-    
-    
     <!---->
-    
-    
+
     <div id="auto2" class="dbSearch desktopHidden">   
         <input id="search2" name="searchField" class="desktopHidden searchInput" type="text" placeholder="Recherche">
         <button id="searchButton2" class="fas fa-search desktopHidden searchButton"></button>
     </div>
   
-  
-   <div id="titreRecette" class="">
+    <div id="titreRecette" class="">
         <h2 id="nomRecette"><?php echo $result[0]['nomRecette'];?></h2>
-   </div>
-   
+    </div>
    
     <main>
         <div class="mobile">
@@ -163,14 +153,14 @@ if (isset($_GET['code'])){
                 </div>
                 <div id="etapeRecette">
                     <h3>Préparation</h3> <br>
-                       <?php
-                       for($i = 0; $i< count($etapes) ; $i++){
-                           $j = $i +1 ;
-                        ?>
-                       <?php echo '<h4>Étape '. $j .'</h4>' . '<p>'.$etapes[$i]['descriptEtapes'] . '<p>' . '<br>'?>
-                       <?php
-                       }
-                        ?>
+                   <?php
+                   for($i = 0; $i< count($etapes) ; $i++){
+                       $j = $i +1 ;
+                    ?>
+                   <?php echo '<h4>Étape '. $j .'</h4>' . '<p>'.$etapes[$i]['descriptEtapes'] . '<p>' . '<br>'?>
+                   <?php
+                   }
+                    ?>
                 </div>
             </section>
             
@@ -212,7 +202,7 @@ if (isset($_GET['code'])){
                 </div>
                 
                 <div id="portion" class="noprint">
-                   <form action="" method="post">
+                    <form action="" method="post">
                         
                         <!--Portions :-->
                         <input class ="inpServ" name='inputServing' id="inputServing" type="number" value="<?php echo $ingredients[0]['serving']?>" min="0" max="100" >
@@ -223,8 +213,8 @@ if (isset($_GET['code'])){
                 
                 <div id="contenuIngredient">
                    
-                   <h3>Ingrédients : </h3>
-                   <ul class="ingredients">
+                    <h3>Ingrédients : </h3>
+                    <ul class="ingredients">
                         <?php
                             /*$li= '';*/
                             for ($i = 0; $i < count($ingredients); $i++){
@@ -238,10 +228,8 @@ if (isset($_GET['code'])){
                             }
                         ?>
                         
-                   </ul>
-                   
+                    </ul>
                 </div>
-
             </section>
         </div>
     </main>
@@ -271,7 +259,7 @@ if (isset($_GET['code'])){
                 <p class="contactMessage"></p>
             </div>
         </div>
-        <p class="copyright">&copy; Weekly's 2018</p>
+        <p class="copyright">Built by <a href="https://sarraallaoui.be">Sarra Allaoui</a>, <a href="https://liviabottoni.eu">Livia Bottoni</a>, <a href="https://sarahlarosa.be/">Sarah La Rosa</a>. See this project on <a href="https://github.com/LiviaButtons/Weeklys">Github</a></p>
     </div>
 </footer>
     
@@ -288,8 +276,6 @@ $(document).ready(function(){
         var idRecette= <?php echo json_encode ($idRecette);?>;
         var idRecetteNumber = Number(idRecette);
         console.log(idRecette);
-     
-
         
         $.ajax({
             url:"serving.php",
