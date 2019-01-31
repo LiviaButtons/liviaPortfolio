@@ -310,11 +310,14 @@ input:focus {
 #portfolio .portfolio-section .modal-header {
   height: 60px; }
   #portfolio .portfolio-section .modal-header .close {
+    width: 31px;
+    height: 31px;
     position: relative;
     top: -35px;
     right: 10px;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    opacity: 0.4; }
 #portfolio .portfolio-section .demo-img {
   padding: 0; }
 #portfolio .portfolio-section .demo-buttons {
@@ -453,7 +456,7 @@ footer {
       overflow: hidden;
       width: 100%;
       height: 0;
-      transition: .5s ease; }
+      transition: transform 0.5s ease; }
       .portfolio-section .port-box .portfolio-item .overlay .text {
         opacity: 1 !important;
         padding: 5px;
@@ -470,6 +473,14 @@ footer {
         text-align: center; }
   .portfolio-section .port-box .portfolio-item:hover .overlay {
     height: 100%; }
+  .portfolio-section .modal-header .close span {
+    transition: transform 0.5s ease-in; }
+  .portfolio-section .modal-header .close:hover {
+    opacity: 0.8 !important; }
+    .portfolio-section .modal-header .close:hover span {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
 
   #about .about-row {
     flex-direction: row; }
