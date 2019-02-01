@@ -1,6 +1,6 @@
 <?php 
 
-require_once('../../config/config.php');  
+require_once('../../../config/config.php');  
 
 try {
 
@@ -20,6 +20,11 @@ if (isset($_GET['code'])){
     $statement->execute();
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     
+    if (count($result) <= 0) {
+        header('location: 404.html');
+        die();
+    }
+    
     $queryIngredients = "SELECT t_recette.idRecette, t_ingredientrecette.ingredientQuantite, t_ingredientrecette.ingredientMesure, t_ingredient.nomIngredient, t_recette.difficulte, t_recette.serving FROM t_recette 
                             JOIN t_ingredientrecette
 	                           ON t_ingredientrecette.idRecette = t_recette.idRecette
@@ -30,18 +35,7 @@ if (isset($_GET['code'])){
     $statement = $pdo->prepare($queryIngredients);
     $statement->execute();
     $ingredients = $statement->fetchAll(PDO::FETCH_ASSOC);
-    
-    /*$queryIngredients = "SELECT t_recette.idRecette,  t_recette.serving FROM t_recette 
-                            JOIN t_ingredientrecette
-	                           ON t_ingredientrecette.idRecette = t_recette.idRecette
-                            JOIN t_ingredient
-	                           ON t_ingredient.idIngredient = t_ingredientrecette.idIngredient
-
-                        WHERE t_recette.idRecette = $idRecette";
-    $statement = $pdo->prepare($queryIngredients);
-    $statement->execute();
-    $ingredients = $statement->fetchAll(PDO::FETCH_ASSOC);*/
-    
+        
     $queryEtapes = "SELECT t_etapes.descriptEtapes FROM t_etapes 
                         JOIN t_recette
 	                    on t_etapes.idRecette = t_recette.idRecette
@@ -67,7 +61,6 @@ if (isset($_GET['code'])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-   
    
     <!-- JavaScript and jQuery -->
         <script src="./js/jquery-3.3.1.min.js"></script>
@@ -135,7 +128,6 @@ if (isset($_GET['code'])){
     </header>
     
     <!---->
-
     <div id="auto2" class="dbSearch desktopHidden">   
         <input id="search2" name="searchField" class="desktopHidden searchInput" type="text" placeholder="Recherche">
         <button id="searchButton2" class="fas fa-search desktopHidden searchButton"></button>
@@ -178,7 +170,6 @@ if (isset($_GET['code'])){
                             } else {
                                 echo 'Difficulté : Difficile.';
                             }
-                        
                         ?>
                     </p>
                     
@@ -222,12 +213,9 @@ if (isset($_GET['code'])){
                                     echo '<li>' . $ingredients[$i]['ingredientQuantite']. ' ' . $ingredients[$i]['ingredientMesure'] . ' ' . $ingredients[$i]['nomIngredient'] . '</li>';
                                 }else {
                                     echo '<li>' . ' ' . $ingredients[$i]['ingredientMesure'] . ' ' . $ingredients[$i]['nomIngredient'] . '</li>';
-                                }
-                                
-                                
+                                } 
                             }
                         ?>
-                        
                     </ul>
                 </div>
             </section>
@@ -262,10 +250,7 @@ if (isset($_GET['code'])){
         <p class="copyright">Built by <a href="https://sarraallaoui.be">Sarra Allaoui</a>, <a href="https://liviabottoni.eu">Livia Bottoni</a>, <a href="https://sarahlarosa.be/">Sarah La Rosa</a>. See this project on <a href="https://github.com/LiviaButtons/Weeklys">Github</a></p>
     </div>
 </footer>
-    
-    
-    
-    
+     
 <script>
 $(document).ready(function(){
     $('#btnServing').on("click", function(e){

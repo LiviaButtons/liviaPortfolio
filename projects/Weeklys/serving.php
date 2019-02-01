@@ -1,5 +1,5 @@
 <?php
-require_once('../../config/config.php');  
+require_once('../../../config/config.php');  
 
 try {
     $pdo = new PDO(MYSQL_DSN, DB_USER, DB_PWD);  
