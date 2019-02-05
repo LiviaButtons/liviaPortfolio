@@ -351,9 +351,7 @@ input:focus, {
         } 
     }
     
-    .portfolio-section {
-        cursor: pointer;
-        
+    .portfolio-section {        
         .port-box {
             .portfolio-item {
                 position: relative;
@@ -383,8 +381,6 @@ input:focus, {
                     }
                 }
             }
-            
-            
             
             .portfolio-two {
                 background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
@@ -710,6 +706,17 @@ footer {
                     transform: rotate(180deg);
                 }
             }            
+        }
+        
+        .modal-body {
+            a.btn {
+                transition: color 2s ease, background-color 2s ease;
+            }
+            
+            a.btn:hover {
+                color: $main-teal !important;
+                background-color: #FFF !important;
+            }
         }
     }
     

@@ -254,83 +254,81 @@ input:focus {
     color: #FFF;
     background-color: #2d909c;
     border: 1px solid #FFF; }
-#portfolio .portfolio-section {
+#portfolio .portfolio-section .port-box .portfolio-item {
+  position: relative;
+  height: 250px;
+  margin: 15px 0px 15px 0px;
+  box-shadow: #d6d6d6 0px 0px 15px 3px, #d6d6d6 0px 0px 15px 3px;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
   cursor: pointer; }
-  #portfolio .portfolio-section .port-box .portfolio-item {
+  #portfolio .portfolio-section .port-box .portfolio-item span {
+    padding: 25px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    z-index: 10;
+    color: #000;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); }
+  #portfolio .portfolio-section .port-box .portfolio-item .overlay .text {
+    opacity: 0; }
+#portfolio .portfolio-section .port-box .portfolio-two {
+  background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+#portfolio .portfolio-section .port-box .portfolio-first {
+  background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+#portfolio .portfolio-section .port-box .portfolio-third {
+  background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+#portfolio .portfolio-section .port-box .portfolio-four {
+  background-image: url(../assets/portfolio/octopus/octo-thumb.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+#portfolio .portfolio-section .port-box .portfolio-five {
+  background-image: url(../assets/portfolio/pixabayPhotography/pixabay-thumb.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+#portfolio .portfolio-section .port-box .portfolio-six {
+  background-image: url(../assets/portfolio/easyPie/easy-as-pie.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+#portfolio .portfolio-section img {
+  max-width: 100%;
+  max-height: 100%; }
+#portfolio .portfolio-section .modal-header {
+  height: 60px; }
+  #portfolio .portfolio-section .modal-header .close {
+    width: 31px;
+    height: 31px;
     position: relative;
-    height: 250px;
-    margin: 15px 0px 15px 0px;
-    box-shadow: #d6d6d6 0px 0px 15px 3px, #d6d6d6 0px 0px 15px 3px;
-    opacity: 0.7;
-    filter: alpha(opacity=70);
-    cursor: pointer; }
-    #portfolio .portfolio-section .port-box .portfolio-item span {
-      padding: 25px 10px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 50px;
-      z-index: 10;
-      color: #000;
-      opacity: 1;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%); }
-    #portfolio .portfolio-section .port-box .portfolio-item .overlay .text {
-      opacity: 0; }
-  #portfolio .portfolio-section .port-box .portfolio-two {
-    background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; }
-  #portfolio .portfolio-section .port-box .portfolio-first {
-    background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; }
-  #portfolio .portfolio-section .port-box .portfolio-third {
-    background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; }
-  #portfolio .portfolio-section .port-box .portfolio-four {
-    background-image: url(../assets/portfolio/octopus/octo-thumb.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; }
-  #portfolio .portfolio-section .port-box .portfolio-five {
-    background-image: url(../assets/portfolio/pixabayPhotography/pixabay-thumb.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; }
-  #portfolio .portfolio-section .port-box .portfolio-six {
-    background-image: url(../assets/portfolio/easyPie/easy-as-pie.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; }
-  #portfolio .portfolio-section img {
-    max-width: 100%;
-    max-height: 100%; }
-  #portfolio .portfolio-section .modal-header {
-    height: 60px; }
-    #portfolio .portfolio-section .modal-header .close {
-      width: 31px;
-      height: 31px;
-      position: relative;
-      top: -35px;
-      right: 10px;
-      padding: 0;
-      margin: 0;
-      opacity: 0.4; }
-  #portfolio .portfolio-section .demo-img {
-    padding: 0; }
-  #portfolio .portfolio-section .demo-buttons {
+    top: -35px;
+    right: 10px;
+    padding: 0;
+    margin: 0;
+    opacity: 0.4; }
+#portfolio .portfolio-section .demo-img {
+  padding: 0; }
+#portfolio .portfolio-section .demo-buttons {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  #portfolio .portfolio-section .demo-buttons a.btn {
     margin-top: 10px;
-    margin-bottom: 10px; }
-    #portfolio .portfolio-section .demo-buttons a.btn {
-      margin-top: 10px;
-      color: #FFF;
-      background-color: #2d909c;
-      border: none; }
+    color: #FFF;
+    background-color: #2d909c;
+    border: none; }
 
 /* --------------------------------------------------- */
 /* ----------------------- About --------------------- */
@@ -485,6 +483,11 @@ footer {
       -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       transform: rotate(180deg); }
+  .portfolio-section .modal-body a.btn {
+    transition: color 2s ease, background-color 2s ease; }
+  .portfolio-section .modal-body a.btn:hover {
+    color: #2d909c !important;
+    background-color: #FFF !important; }
 
   #about .about-row {
     flex-direction: row; }
