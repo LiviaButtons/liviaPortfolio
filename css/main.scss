@@ -586,6 +586,7 @@ footer {
         }
         
         .contactMessage {
+            margin-top: 50px;
             opacity: 0;
             transition: opacity 1s linear;
         }
@@ -691,7 +692,6 @@ footer {
         
         .modal-header {
             .close {
-
                 span {
                     transition: transform 0.5s ease-in;
                 }
@@ -740,6 +740,10 @@ footer {
             span {
                 color: $main-teal;
             }
+        }
+        
+        .contactMessage {
+            margin-top: 20px;
         }
     }
 }

@@ -410,6 +410,7 @@ footer {
   footer .contact-form .forTest {
     display: none; }
   footer .contact-form .contactMessage {
+    margin-top: 50px;
     opacity: 0;
     transition: opacity 1s linear; }
   footer p {
@@ -500,6 +501,8 @@ footer {
     color: #2d909c;
     background-color: #fff; }
     footer #contactButton:hover span {
-      color: #2d909c; } }
+      color: #2d909c; }
+  footer .contactMessage {
+    margin-top: 20px; } }
 
 /*# sourceMappingURL=main.css.map */
