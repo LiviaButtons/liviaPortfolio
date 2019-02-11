@@ -7,7 +7,9 @@
         <meta name="description" content="Portfolio website of Livia Bottoni, junior front-end developer based in Brussels, Belgium" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Livia Bottoni">
-        <meta name="revised" content"Livia Bottoni, 05/02/2019">
+        <meta name="revised" content="Livia Bottoni, 11/02/2019">
+        <meta name="url" content="https://liviabottoni.eu">
+        <meta http-equiv="Content-Security-Policy" content="default-src https:">
         <meta name="google-site-verification" content="RqwAW_jIIxkOLIfQTHp1aN7NGCv3_4dWg24BiXiD8jY" />
         <meta property="og:title" content="Livia Bottoni - Junior Front-end Developer" />
         <meta property="og:url" content="https://liviabottoni.eu" />
@@ -16,20 +18,27 @@
         <meta property="og:image_url" content="https://liviabottoni.eu/assets/img/header-img.png" />
         <meta property="og:image:secure_url" content="https://liviabottoni.eu/assets/img/header-img.png" />
         <meta property="og:image:alt" content="Header image showing a laptop, computer screen and smartphone" />        
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:description" content="Portfolio website of Livia Bottoni, junior front-end developer based in Brussels, Belgium" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:description" content="This is the portfolio website of Livia Bottoni, a junior front-end developer based in Brussels, Belgium." />
         <title>Livia Bottoni | Front-end web developer based in Brussels</title>
         
         <!-- JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" 
+                integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" 
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+                crossorigin="anonymous"></script>
         <script src="./js/functions.js"></script>
         
         <!-- CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+              crossorigin="anonymous">
         <link rel="stylesheet" href="./css/main.css">
         
         <!-- favicon -->
@@ -83,9 +92,9 @@
             </section>
              
             <section id="portfolio" class="container-fluid justify-content-center">
-                <h2 data-aos="fade-up"><span data-aos="fade-up">Portfolio</span></h2>
+                <h2><span>Portfolio</span></h2>
                 
-                <div id="portfolio-buttons" class="col-xs-10 col-xs-offset-1" data-aos="fade-up">
+                <div id="portfolio-buttons" class="col-xs-10 col-xs-offset-1">
                     <button id="all" class="port-button active">All</button>
                     <button id="web" class="port-button">Web</button>
                     <button id="design" class="port-button">Design</button>
@@ -94,7 +103,7 @@
                 <!-- first portfolio piece -->
                 <div class="col-xs-12 col-md-10 col-md-offset-1 portfolio-section">    
                     <div class="col-md-2 col-lg-4 port-box js-web">
-                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-first" data-toggle="modal" data-target="#modal1" data-aos="fade-up">
+                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-first" data-toggle="modal" data-target="#modal1">
                             <!-- thumbnail that will open the modal -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
                             <div class="overlay">
@@ -171,7 +180,7 @@
 
                     <!-- second portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-two" data-toggle="modal" data-target="#modal2" data-aos="fade-up">
+                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-two" data-toggle="modal" data-target="#modal2">
                             <!-- thumbnail that will open the modal -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
                             <div class="overlay">
@@ -220,7 +229,7 @@
 
                     <!-- third portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-web">
-                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-third" data-toggle="modal" data-target="#modal3" data-aos="fade-up">
+                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-third" data-toggle="modal" data-target="#modal3">
                             <!-- thumbnail that will open the modal -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
                             <div class="overlay">
@@ -290,7 +299,7 @@
 
                     <!-- fourth portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-four" data-toggle="modal" data-target="#modal4" data-aos="fade-up">
+                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-four" data-toggle="modal" data-target="#modal4">
                             <!-- thumbnail that will open the modal -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
                             <div class="overlay">
@@ -343,7 +352,7 @@
 
                     <!-- fifth portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-web">
-                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-five" data-toggle="modal" data-target="#modal5" data-aos="fade-up">
+                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-five" data-toggle="modal" data-target="#modal5">
                             <!-- thumbnail that will open the modal -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
                             <div class="overlay">
@@ -410,7 +419,7 @@
 
                     <!-- sixth portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-six" data-toggle="modal" data-target="#modal6" data-aos="fade-up">
+                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-six" data-toggle="modal" data-target="#modal6">
                             <!-- thumbnail that will open the modal -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
                             <div class="overlay">
@@ -463,7 +472,7 @@
                 <h2><span>About</span></h2>
                
                 <div class="col-xs-12 col-md-10 col-md-offset-1 about-row">
-                    <div class="col-xs-12 col-md-4" data-aos="fade-up">
+                    <div class="col-xs-12 col-md-4">
                         <div class="about-box">
                             <div>
                                 <img src="./assets/icons/head-white.svg" alt="Icon depicting a head">
@@ -502,7 +511,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-4" data-aos="fade-up">
+                    <div class="col-xs-12 col-md-4">
                         <div class="about-box">
                             <div>
                                 <img src="./assets/icons/code-white.svg" alt="Icon meant to depict code">
@@ -548,7 +557,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-4" data-aos="fade-up">
+                    <div class="col-xs-12 col-md-4">
                         <div class="about-box">
                             <div>
                                 <img src="./assets/icons/brush-white.svg" alt="Icon of a brush">
@@ -590,7 +599,7 @@
             <h2><span>Contact</span></h2>
             
             <div class="col-xs-10 col-xs-offset-1">
-                <div class="col-md-8 col-md-offset-2 contact-form" id="js-contactForm" data-aos="fade-up">
+                <div class="col-md-8 col-md-offset-2 contact-form" id="js-contactForm">
                     <div class="form-group col-md-10 col-md-offset-1">
                         <label for="email" class="sr-only">E-mail (required)</label>
                         <input type="text" name="email" id="email" placeholder="Your e-mail (required)" class="form-group">
