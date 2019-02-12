@@ -386,12 +386,6 @@ main {
                 }
             }
             
-            .portfolio-two {
-                background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-            }
             
             .portfolio-first {
                 background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
@@ -400,6 +394,12 @@ main {
                 background-size: contain;
             }
             
+            .portfolio-two {
+                background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
             .portfolio-third {
                 background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
                 background-repeat: no-repeat;

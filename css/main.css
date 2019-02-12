@@ -278,13 +278,13 @@ main {
     -ms-transform: translate(-50%, -50%); }
   #portfolio .portfolio-section .port-box .portfolio-item .overlay .text {
     opacity: 0; }
-#portfolio .portfolio-section .port-box .portfolio-two {
-  background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
+#portfolio .portfolio-section .port-box .portfolio-first {
+  background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; }
-#portfolio .portfolio-section .port-box .portfolio-first {
-  background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
+#portfolio .portfolio-section .port-box .portfolio-two {
+  background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; }
