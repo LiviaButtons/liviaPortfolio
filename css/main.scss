@@ -359,26 +359,18 @@ main {
         .port-box {
             .portfolio-item {
                 position: relative;
-<<<<<<< HEAD:css/main.scss
                 padding: 0;
-//                height: 250px;
-=======
-                height: 250px;
->>>>>>> b7f151df669968dd37967b02979d1fbf98cd6760:css/main.scss
                 margin: 15px 0px 15px 0px;
                 box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
                 opacity: 0.7;
                 filter: alpha(opacity=70); // IE 
                 cursor: pointer; // necessary for iOS
-<<<<<<< HEAD:css/main.scss
                 
                 img {
                     width: 100%;
                     height: auto;
                 }
-=======
->>>>>>> b7f151df669968dd37967b02979d1fbf98cd6760:css/main.scss
-            
+                
                 span {
                     padding: 25px 10px;
                     position: absolute;
@@ -391,106 +383,13 @@ main {
                     transform: translate(-50%, -50%);
                     -ms-transform: translate(-50%, -50%)
                 }
-                
-<<<<<<< HEAD:css/main.scss
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-                
-=======
->>>>>>> b7f151df669968dd37967b02979d1fbf98cd6760:css/main.scss
+
                 .overlay {
                     .text {
                         opacity: 0;
                     }
                 }
             }
-            
-            
-<<<<<<< HEAD:css/main.scss
-//            .portfolio-first {
-//                background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
-//                background-repeat: no-repeat;
-//                background-position: center;
-//                background-size: contain;
-//            }
-            
-//            .portfolio-two {
-//                background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
-//                background-repeat: no-repeat;
-//                background-position: center;
-//                background-size: contain;
-//            }
-//            .portfolio-third {
-//                background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
-//                background-repeat: no-repeat;
-//                background-position: center;
-//                background-size: contain;
-//            }
-            
-//            .portfolio-four {
-//                background-image: url(../assets/portfolio/octopus/octo-thumb.png);
-//                background-repeat: no-repeat;
-//                background-position: center;
-//                background-size: contain;
-//            }
-//            
-//            .portfolio-five {
-//                background-image: url(../assets/portfolio/pixabayPhotography/pixabay-thumb.png);
-//                background-repeat: no-repeat;
-//                background-position: center;
-//                background-size: contain;
-//            }
-            
-//            .portfolio-six {
-//                background-image: url(../assets/portfolio/easyPie/easy-as-pie.png);
-//                background-repeat: no-repeat;
-//                background-position: center;
-//                background-size: contain;
-//            }
-=======
-            .portfolio-first {
-                background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-            }
-            
-            .portfolio-two {
-                background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-            }
-            .portfolio-third {
-                background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-            }
-            
-            .portfolio-four {
-                background-image: url(../assets/portfolio/octopus/octo-thumb.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-            }
-            
-            .portfolio-five {
-                background-image: url(../assets/portfolio/pixabayPhotography/pixabay-thumb.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-            }
-            
-            .portfolio-six {
-                background-image: url(../assets/portfolio/easyPie/easy-as-pie.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-            }
->>>>>>> b7f151df669968dd37967b02979d1fbf98cd6760:css/main.scss
         }
         
         img {
