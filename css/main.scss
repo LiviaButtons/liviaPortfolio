@@ -1,0 +1,764 @@
+/* declaring colour variables */
+$main-teal: #2d909c;
+$dark-teal: #2d535b;
+$dark-grey: #303030;
+$light-grey: #f4f2f2;
+
+/* importing fonts */
+@font-face {
+    font-family: Lato;
+    src: url(../assets/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: LatoLight;
+    src: url(../assets/fonts/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: LatoBold;
+    src: url(../assets/fonts/Lato-Bold.ttf);
+}
+
+/* declaring font variables */
+$heading-font: 'LatoBold', sans-serif;
+$text-font: 'Lato', sans-serif;
+
+
+/* --------------------------------------------------- */
+/* --------------------- General --------------------- */
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+html * {
+    font-family: $text-font;
+    line-height: 1.5em;
+    color: $dark-grey;
+    
+    p, ul, li {
+        font-size: 16px;
+    }
+}
+
+body {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header, 
+main,
+section, 
+footer {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+}
+
+::-moz-selection, // Firefox
+::selection { // AKA highlighted text
+    color: #FFF;
+    background: $main-teal;
+}
+
+header {
+    padding-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    color: $main-teal;
+}
+
+h2 {
+    margin-bottom: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    /* the lines around the h2 */
+    &:before {
+        border-top: 2px solid $main-teal;
+        content:"";
+        margin: 0 auto; // this centers the line to the full width specified 
+        position: absolute; // positioning must be absolute here, and relative positioning must be applied to the parent 
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    span { 
+        //to hide the lines from behind the text, same bgc as the container
+        font-family: $heading-font;
+        color: $main-teal;
+        background: #fff; 
+        padding: 0 15px; 
+    }
+}
+
+textarea:focus, 
+input:focus, {
+    outline: $dark-teal;
+}
+
+/* button on 404 page */
+#hp-btn {
+    margin-top: 10px;
+    color: #FFF;
+    background-color: $main-teal;
+    border: none;
+}
+
+main {
+    min-height: 300px;
+}
+
+
+/* --------------------------------------------------- */
+/* ------------------------ Nav ---------------------- */
+#nav {
+    background-color: $main-teal;
+    
+    .container-fluid {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: $main-teal;
+        
+        .navbar-default, 
+        .navbar-collapse {
+            border: none;
+        }
+        
+        /* animation of the logo */
+        .navbar-header {
+            position: relative;
+            
+            .navbar-brand {
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                border: 2px solid #FFF;
+                padding: 5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                transform: rotate(0deg);
+                transition: transform 0.5s linear;
+                
+                .logo-text {
+                    font-family: LatoBold;
+                    text-transform: uppercase;
+                    color: #FFF;
+                    transform: rotate(0deg);
+                    transition: transform 0.5s linear;
+                }
+            }
+            
+            .navbar-brand:hover {
+                transform: rotate(45deg);
+                
+                .logo-text {
+                    transform: rotate(-45deg);
+                }
+            }
+            
+            /* animation of the hamburger menu */
+            #hamMenu {
+                border: none;
+                width: 30px;
+                height: 30px;
+                position: relative;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+                
+                span {
+                    display: block;
+                    position: absolute;
+                    height: 3px;
+                    width: 100%;
+                    background: #FFF;
+                    border-radius: 9px;
+                    opacity: 1;
+                    left: 0;
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                    -webkit-transition: .25s ease-in-out;
+                    -moz-transition: .25s ease-in-out;
+                    -o-transition: .25s ease-in-out;
+                    transition: .25s ease-in-out;
+                }
+
+                span:nth-child(1) {
+                    top: 5px;
+                }
+
+                span:nth-child(2),
+                span:nth-child(3) {
+                    top: 15px;
+                }
+
+                span:nth-child(4) {
+                    top: 25px;
+                }
+            }
+            
+            #hamMenu.open {
+            span:nth-child(1) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                }
+            
+                span:nth-child(2) {
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+
+                span:nth-child(3) {
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+
+                span:nth-child(4) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                }
+            }
+
+            a {
+                color: #FFF;  
+            }
+        }
+            
+        button[aria-expanded="true"]{
+            background-color: $main-teal;
+        }
+
+        button[aria-expanded="false"] {
+            background-color: $main-teal;
+        }
+    }
+
+    ul {
+        li {
+            a { 
+                color: #FFF;
+                border-left: 1px solid $main-teal;
+                border-right: 1px solid $main-teal;
+            }
+        }
+    
+        .active {
+            a {
+                background-color: $dark-teal;
+            }
+        }
+    }
+}
+
+
+/* --------------------------------------------------- */
+/* ---------------------- Header --------------------- */
+.header-img {
+    height: 200px;
+    background-image: url(../assets/img/header-img.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* bouncing element for scroll */
+.scroll-down {
+    text-align: center;
+    height: 40px;
+    margin-top: 20px;
+    transform: rotate(90deg);
+    
+    span {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+//        left: calc(50% + 20px); // be at the centre, so 50% - half of width
+        left: 50%;
+        color: $main-teal;
+        font-size: 40px;
+        -webkit-animation: 1s bounce infinite;
+        -moz-animation: 1s bounce infinite;
+        -o-animation: 1s bounce infinite;
+        -ms-animation: 1s bounce infinite;
+        animation: 1s bounce infinite;
+    }
+    
+    @-webkit-keyframes bounce { 
+        0%, 50%, 100% {-webkit-transform: translateX(0);} 
+        25%, 75% {-webkit-transform: translateX(10px);} 
+    } 
+    
+    @keyframes bounce { 
+        0%, 100% {-webkit-transform: translateX(0);} 
+        50% {-webkit-transform: translateX(10px);} 
+    }
+}
+
+/* --------------------------------------------------- */
+/* -------------------- Portfolio -------------------- */
+#portfolio {
+    #portfolio-buttons {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        button {
+            padding: 5px 10px 5px 10px;
+            width: 65px;
+            color: $main-teal;
+            background-color: #fff;
+            border: 1px solid $main-teal;
+            border-radius: 8px;
+        }
+        
+        button.active {
+            color: #FFF;
+            background-color: $main-teal;
+            border: 1px solid #FFF;
+        } 
+    }
+    
+    .portfolio-section {        
+        .port-box {
+            .portfolio-item {
+                position: relative;
+                padding: 0;
+//                height: 250px;
+                margin: 15px 0px 15px 0px;
+                box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
+                opacity: 0.7;
+                filter: alpha(opacity=70); // IE 
+                cursor: pointer; // necessary for iOS
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            
+                span {
+                    padding: 25px 10px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    font-size: 50px;
+                    z-index: 10;
+                    color: #000;
+                    opacity: 1;
+                    transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%)
+                }
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                
+                .overlay {
+                    .text {
+                        opacity: 0;
+                    }
+                }
+            }
+            
+            
+//            .portfolio-first {
+//                background-image: url(../assets/portfolio/weekly/weekly-thumb.png);
+//                background-repeat: no-repeat;
+//                background-position: center;
+//                background-size: contain;
+//            }
+            
+//            .portfolio-two {
+//                background-image: url(../assets/portfolio/weeklyLogo/weekly-bowl.svg);
+//                background-repeat: no-repeat;
+//                background-position: center;
+//                background-size: contain;
+//            }
+//            .portfolio-third {
+//                background-image: url(../assets/portfolio/roboCode/robo-thumb.png);
+//                background-repeat: no-repeat;
+//                background-position: center;
+//                background-size: contain;
+//            }
+            
+//            .portfolio-four {
+//                background-image: url(../assets/portfolio/octopus/octo-thumb.png);
+//                background-repeat: no-repeat;
+//                background-position: center;
+//                background-size: contain;
+//            }
+//            
+//            .portfolio-five {
+//                background-image: url(../assets/portfolio/pixabayPhotography/pixabay-thumb.png);
+//                background-repeat: no-repeat;
+//                background-position: center;
+//                background-size: contain;
+//            }
+            
+//            .portfolio-six {
+//                background-image: url(../assets/portfolio/easyPie/easy-as-pie.png);
+//                background-repeat: no-repeat;
+//                background-position: center;
+//                background-size: contain;
+//            }
+        }
+        
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .modal-header {
+            height: 60px;
+            
+            .close {
+                width: 31px;
+                height: 31px;
+                position: relative;
+                top: -35px;
+                right: 10px;
+                padding: 0;
+                margin: 0;
+                opacity: 0.4;
+            }    
+        }
+        
+        .demo-img {
+            padding: 0;
+        }
+        
+        .demo-buttons {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            a.btn {
+                margin-top: 10px;
+                color: #FFF;
+                background-color: $main-teal;
+                border: none;
+            }
+        }
+    }
+}
+
+
+/* --------------------------------------------------- */
+/* ----------------------- About --------------------- */
+#about {
+    .about-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .about-box {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            min-height: 350px;
+            box-shadow: rgb(214, 214, 214) 0px 0px 15px 3px, rgb(214, 214, 214) 0px 0px 15px 3px;
+            padding: 30px;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 10px;
+                    border: 1px solid $main-teal;
+                    border-radius: 50px;
+                }
+            }
+
+            .find-me {
+                padding-top: 20px;
+            }
+
+            ul {
+                padding: 0;
+                margin-left: 0;
+                list-style: none;
+
+                li > span {
+                    color: $main-teal;
+                    padding-right: 10px;
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------- */
+/* ---------------------- Footer --------------------- */
+footer {
+    background-color: $main-teal;
+
+    ::-moz-selection, 
+    ::selection {
+        color: $main-teal;
+        background: #FFF;
+    }    
+    
+    h2 {
+        &:before {
+            border-top: 2px solid #FFF;
+        }
+        
+        span { 
+            color: #FFF;
+            background: $main-teal; 
+            padding: 0 15px; 
+        }
+    }
+    
+    .contact-form {        
+        .form-group {
+            margin-bottom: 5px;
+        }
+        
+        input,
+        textarea,
+        button {
+            background-color: $main-teal;
+            border: 1px solid #FFF;
+            border-radius: 8px;
+            padding: 12px;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #FFF;
+            width: 100%;
+            height: 50px;
+        }
+        
+        input::placeholder,
+        textarea::placeholder {
+            color: #FFF;
+        }
+        
+        textarea {
+            resize: none;
+        }
+        
+        span {
+            color: #FFF;
+            margin-right: 15px;
+        }
+        
+        .extraInfo {
+            padding: 12px;
+            text-align: center;
+            color: #FFF;
+            
+            p {
+                height: 40px;
+            }
+        }
+        
+        .forTest {
+            display: none;
+        }
+        
+        .contactMessage {
+            margin-top: 50px;
+            opacity: 0;
+            transition: opacity 1s linear;
+        }
+    }
+    
+    p {
+        text-align: center;
+        margin-top: 10px;
+        color: #FFF;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #nav {
+        li {
+            transition: background-color 1s ease;
+        }
+        
+        li:hover {
+            background-color: $dark-teal;
+            transition: background-color 1s ease;
+        }
+    }
+    
+    .header-img {
+        height: 500px;
+    }
+    
+    .scroll-down {
+        margin-top: 60px;
+        
+        .glyphicon-chevron-right {
+            transition: color 1s ease;
+        }
+    
+        .glyphicon-chevron-right:hover {
+            color: $dark-teal;
+        }
+    }
+    
+    #portfolio {
+        #portfolio-buttons {
+            .port-button {
+                transition: background-color 2s ease, color 2s ease;
+            }
+            
+            .port-button:hover {
+                color: #FFF;
+                background-color: $main-teal;
+                border: 1px solid #FFF;
+            }
+        }
+    }
+    
+    .portfolio-section { 
+        .port-box {  
+            .portfolio-item {
+                opacity: 1 !important;
+                transition: .5s ease;
+                cursor: pointer;
+
+                span {
+                    opacity: 0 !important;
+                }
+                
+                .overlay {
+                    background-color: $main-teal;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 0px;
+                    transition: height 0.5s ease;
+                    cursor: pointer;
+
+                    .text {
+                        opacity: 1 !important;
+                        padding: 5px;
+                        width: 100px;
+                        height: 100px;
+                        color: #FFF;
+                        font-size: 60px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        -webkit-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+                }
+            }
+            
+            .portfolio-item:hover {
+                .overlay {
+                    height: 100%;
+                } 
+            }
+        }
+        
+        .modal-header {
+            .close {
+                span {
+                    transition: transform 0.5s ease-in;
+                }
+            }
+            
+            .close:hover {
+                opacity: 0.8 !important;
+                
+                span {
+                    -webkit-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
+            }            
+        }
+        
+        .modal-body {
+            a.btn {
+                transition: color 2s ease, background-color 2s ease;
+            }
+            
+            a.btn:hover {
+                color: $main-teal !important;
+                background-color: #FFF !important;
+            }
+        }
+    }
+    
+    #about .about-row {
+        flex-direction: row;
+    }
+    
+    footer {
+        #contactButton {
+            transition: color 2s ease, background-color 2s ease;
+            
+            span {
+                transition: color 2s ease;
+            }
+        }
+        
+        #contactButton:hover {
+            color: $main-teal;
+            background-color: #fff;
+            
+            span {
+                color: $main-teal;
+            }
+        }
+        
+        .contactMessage {
+            margin-top: 20px;
+        }
+    }
+}

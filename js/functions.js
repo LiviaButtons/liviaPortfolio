@@ -2,10 +2,8 @@
 // Author: Livia Bottoni
 
 $(document).ready(function (event) {
-
-// -------------------------
-// Function for hamburger menu and animation
-// animation based on: https://codepen.io/designcouch/pen/Atyop
+    // Function for hamburger menu and animation
+    // animation based on: https://codepen.io/designcouch/pen/Atyop
     // "open" and "close" hamburger Menu upon click
     $('#hamMenu').on("click", function (e) {
         $('#hamMenu').toggleClass('open');

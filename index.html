@@ -4,31 +4,47 @@
       xmlns:fb="http://ogp.me/ns/fb#">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio website of Livia Bottoni, junior front-end developer based in Brussels, Belgium" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Livia Bottoni">
+        <meta name="revised" content="Livia Bottoni, 24/03/2019">
+        <meta name="url" content="https://liviabottoni.eu">
+        <meta http-equiv="Content-Security-Policy" content="default-src https:">
         <meta name="google-site-verification" content="RqwAW_jIIxkOLIfQTHp1aN7NGCv3_4dWg24BiXiD8jY" />
         <meta property="og:title" content="Livia Bottoni - Junior Front-end Developer" />
         <meta property="og:url" content="https://liviabottoni.eu" />
-        <meta property="og:image" content="https://liviabottoni.eu/assets/img/header-img.svg" style="width:500px;height:auto" />
-        <meta property="og:description" content="Portfolio website of Livia Bottoni, junior front-end developer based in Belgium" />
-        <title>Livia Bottoni</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://liviabottoni.eu/assets/img/header-img.png" />
+        <meta property="og:image_url" content="https://liviabottoni.eu/assets/img/header-img.png" />
+        <meta property="og:image:secure_url" content="https://liviabottoni.eu/assets/img/header-img.png" />
+        <meta property="og:image:alt" content="Header image showing a laptop, computer screen and smartphone" />        
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:description" content="This is the portfolio website of Livia Bottoni, a junior front-end developer based in Brussels, Belgium." />
+        <title>Livia Bottoni | Front-end web developer based in Brussels</title>
         
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- jQuery UI -->
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <!-- custom JS -->
+        <!-- JS -->
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" 
+                integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" 
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+                crossorigin="anonymous"></script>
         <script src="./js/functions.js"></script>
         
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- custom CSS -->
-        <link rel="stylesheet" href="./css/style.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/main.css">
         
         <!-- favicon -->
         <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
     </head>
+    
     <body id="home" class="container-fluid">
         <header>
             <nav id="nav" class="navbar navbar-default navbar-fixed-top">
@@ -40,7 +56,11 @@
                             <span class="hamMenu-bar"></span>
                             <span class="hamMenu-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Livia Bottoni</a>
+                        <a class="navbar-brand livia-logo" href="#">
+                            <span class="logo-text">
+                                {LB}
+                            </span>
+                        </a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,6 +83,12 @@
                 <div class="col-xs-10 col-xs-offset-1 header-img">
                     <!-- header-img added as background in CSS -->
                 </div>
+                
+                <div class="col-xs-10 col-xs-offset-1 scroll-down">
+                    <a href="#portfolio" class="scroll-button">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
             </section>
              
             <section id="portfolio" class="container-fluid justify-content-center">
@@ -77,10 +103,15 @@
                 <!-- first portfolio piece -->
                 <div class="col-xs-12 col-md-10 col-md-offset-1 portfolio-section">    
                     <div class="col-md-2 col-lg-4 port-box js-web">
-                        <div class="col-xs-12 portfolio-item portfolio-first" data-toggle="modal" data-target="#modal1">
+                        <a href="#" class="col-xs-12 portfolio-item portfolio-first" data-toggle="modal" data-target="#modal1">
                             <!-- thumbnail that will open the modal -->
+                            <img src="./assets/portfolio/weekly/weeklyThumb.jpg" alt="Weekly thumbnail">
+                            <!-- overlay -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
-                        </div>
+                            <div class="overlay">
+                                <div class="text">+</div>
+                            </div>
+                        </a>
 
                         <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -88,7 +119,7 @@
                                     <div class="modal-header">
                                         <h3 class="modal-title" id="modalLabel">Weekly's</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
@@ -136,7 +167,7 @@
 
                                             <div class="col-md-5 demo-buttons">
                                                 <a class="btn btn-primary" href="https://github.com/LiviaButtons/Weeklys" alt="link to Github">Github repository</a>
-                                                <a class="btn btn-primary" href="./projects/Weeklys/index.html" alt="link to demo version">See demo</a>
+                                                <a class="btn btn-primary" href="./projects/Weeklys" alt="link to demo version">See demo</a>
                                             </div>
 
                                             <div class="col-xs-12 demo-img">
@@ -151,10 +182,15 @@
 
                     <!-- second portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div class="col-xs-12 portfolio-item portfolio-two" data-toggle="modal" data-target="#modal2">
+                        <a href="#" class="col-xs-12 portfolio-item portfolio-two" data-toggle="modal" data-target="#modal2">
                             <!-- thumbnail that will open the modal -->
+                            <img src="./assets/portfolio/weeklyLogo/weeklyLogoThumb.jpg" alt="Weekly Logo">
+                            <!-- overlay --> 
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
-                        </div>
+                            <div class="overlay">
+                                <div class="text">+</div>
+                            </div>
+                        </a>
 
                         <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -162,7 +198,7 @@
                                     <div class="modal-header">
                                         <h3 class="modal-title" id="modalLabel">Chosen logo for Weekly's</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
@@ -197,10 +233,15 @@
 
                     <!-- third portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-web">
-                        <div class="col-xs-12 portfolio-item portfolio-third" data-toggle="modal" data-target="#modal3">
+                        <a href="#" class="col-xs-12 portfolio-item portfolio-third" data-toggle="modal" data-target="#modal3">
                             <!-- thumbnail that will open the modal -->
+                            <img src="./assets/portfolio/roboCode/robocodeThumb.jpg" alt="Robocode Homepage">
+                            <!-- overlay -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
-                        </div>
+                            <div class="overlay">
+                                <div class="text">+</div>
+                            </div>
+                        </a>
 
                         <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -208,7 +249,7 @@
                                     <div class="modal-header">
                                         <h3 class="modal-title" id="modalLabel">RoboCode</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
@@ -264,9 +305,14 @@
 
                     <!-- fourth portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div class="col-xs-12 portfolio-item portfolio-four" data-toggle="modal" data-target="#modal4">
+                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-four" data-toggle="modal" data-target="#modal4">
                             <!-- thumbnail that will open the modal -->
+                            <img src="./assets/portfolio/octopus/octopusThumb.jpg" alt="Octopus logo">
+                            <!-- overlay -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
+                            <div class="overlay">
+                                <div class="text">+</div>
+                            </div>
                         </div>
 
                         <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -275,7 +321,7 @@
                                     <div class="modal-header">
                                         <h3 class="modal-title" id="modalLabel">Logo for Weekly Chef</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
@@ -312,11 +358,16 @@
                         </div>
                     </div>
 
-                    <!-- 5th portfolio piece -->
+                    <!-- fifth portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-web">
-                        <div class="col-xs-12 portfolio-item portfolio-five" data-toggle="modal" data-target="#modal5">
+                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-five" data-toggle="modal" data-target="#modal5">
                             <!-- thumbnail that will open the modal -->
+                            <img src="./assets/portfolio/pixabayPhotography/pixabayThumb.jpg" alt="Pixabay Photography homepage">
+                            <!-- overlay -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
+                            <div class="overlay">
+                                <div class="text">+</div>
+                            </div>
                         </div>
 
                         <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -325,13 +376,13 @@
                                     <div class="modal-header">
                                         <h3 class="modal-title" id="modalLabel">Pixabay Photography</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="container-fluid">
                                             <div class="col-xs-12 demo-img">
-                                                <img src="./assets/portfolio/pixabayPhotography/pixabay-desktop.png" alt="Robocode level two">
+                                                <img src="./assets/portfolio/pixabayPhotography/pixabay-desktop.png" alt="Homepage of Pixabay">
                                             </div>
                                             <div class="col-md-7">
                                                 <h4>About this project</h4>
@@ -366,7 +417,8 @@
                                             </div>
 
                                             <div class="col-md-5 demo-buttons">
-                                                <a class="btn btn-primary" href="./projects/PixabayPhotography/index.html" alt="link to demo version">See demo</a>
+                                                <a class="btn btn-primary" href="https://github.com/LiviaButtons/PixabayPhotography" alt="link to Github Repository">Github repository</a> 
+                                                <a class="btn btn-primary" href="./projects/PixabayPhotography" alt="link to demo version">See demo</a>
                                             </div>
                                         </div>
                                     </div>
@@ -377,9 +429,14 @@
 
                     <!-- sixth portfolio piece -->
                     <div class="col-md-2 col-lg-4 port-box js-design">
-                        <div class="col-xs-12 portfolio-item portfolio-six" data-toggle="modal" data-target="#modal6">
+                        <div onclick="void(0)" class="col-xs-12 portfolio-item portfolio-six" data-toggle="modal" data-target="#modal6">
                             <!-- thumbnail that will open the modal -->
+                            <img src="./assets/portfolio/easyPie/easyAsPieThumb.jpg" alt="Easy As Pie Logo">
+                            <!-- overlay -->
                             <span class="glyphicon glyphicon-plus plus-icon"></span>
+                            <div class="overlay">
+                                <div class="text">+</div>
+                            </div>
                         </div>
 
                         <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -388,7 +445,7 @@
                                     <div class="modal-header">
                                         <h3 class="modal-title" id="modalLabel">Logo Easy as Pie</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
@@ -488,8 +545,11 @@
                                 </li>
                                 <li>
                                     <span class="glyphicon glyphicon-ok"></span>
-                                    JavaScript - jQuery - Ajax
-                                </li>
+                                    JavaScript - jQuery
+                                <li>
+                                <li>
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                    Ajax - Node.js
                                 <li>
                                     <span class="glyphicon glyphicon-ok"></span>
                                     PHP - SQL - JSON
@@ -522,7 +582,7 @@
                                 </li>
                                 <li>
                                     <span class="glyphicon glyphicon-ok"></span>
-                                    Prototying - Adobe XD
+                                    Prototying - Adobe XD - Balsamiq
                                 </li>
                                 <li>
                                     <span class="glyphicon glyphicon-ok"></span>
@@ -572,14 +632,14 @@
                     </div>
                     
                     <div class="form-group col-md-10 col-md-offset-1 extraInfo">
-                        <p>Your information will not be saved or shared with any third parties.</p>
+                        <p>Your information will only be used to respond to your queries. It will not be saved or shared with any third parties.</p>
                         <p class="contactMessage"></p>
                     </div>
                 </div>
             </div>
 
             <div class="col-xs-10 col-xs-offset-1">
-                <p>&copy; Livia Bottoni, 2018</p>
+                <p>&copy; Livia Bottoni, 2018-2019</p>
             </div>
         </footer>
     </body>

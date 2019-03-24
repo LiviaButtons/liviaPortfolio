@@ -303,7 +303,5 @@ $(document).ready(function(){
 });
 </script>    
 
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bea9fd2ea520ec1"></script>
-
 </body>
 </html>
